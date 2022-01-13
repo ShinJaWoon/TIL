@@ -1,12 +1,9 @@
-마크다운 (Markdown)
+# 마크다운 (Markdown)
 
-일반 텍스트 기반의 경량 마크업(Markup) 언어
-
-마크들로 둘러싸인 언어
-
+* 일반 텍스트 기반의 경량 마크업(Markup) 언어
+* 마크들로 둘러싸인 언어. 기호를 앞이나 앞뒤로 넣어 서식 수정 가능
 
 
-# 마크다운
 
 ## 마크다운 문법 알아보기
 
@@ -16,7 +13,7 @@
 
 * `#`을 사용
 
-* 예시
+  > 예시
 
   ```markdown
   # 제목1
@@ -44,14 +41,16 @@
 ### 2. 목록 (List)
 
 * 순서가 없는 목록과 순서가 있는 목록을 표시
+
 * 순서가 없는 목록은 `- * +`사용
+
 * 순서가 있는 목록은 `1. 2. 3. (숫자, 형태)`
 
 * `tab`키를 이용해서 들여쓰기 가능
 
 * `shift + tab` 키를 이용해서 내어쓰기 가능
 
-* 예시
+  > 예시
 
   ```markdown
   - 순서가 없는 목록
@@ -76,7 +75,7 @@
   
   ```
 
-
+  > 예시결과
 
 - 순서가 없는 목록
 
@@ -135,7 +134,7 @@ print('Hello World!')
 
 - `[표시할 글자](이곳에 이동할 주소)`
 
-- 예시
+  > 예시
 
   ```markdown
   [google](https://www.google.com) 을 누르면 구글로 이동합니다.
@@ -151,13 +150,17 @@ print('Hello World!')
 
 - `![이미지가 없을 때 나오는 텍스트](이미지가 위치한 경로)`
 
-- 예시
+  > 예시
 
   ```markdown
   ![펭수](https://upload.wikimedia.org/wikipedia/ko/thumb/d/d4/%ED%8E%AD%EC%88%98.jpg/300px-%ED%8E%AD%EC%88%98.jpg)
   ```
 
   ![펭수](https://upload.wikimedia.org/wikipedia/ko/thumb/d/d4/%ED%8E%AD%EC%88%98.jpg/300px-%ED%8E%AD%EC%88%98.jpg)
+
+- `window + shift + s`: 화면캡쳐
+
+- `window + v`  : 클립보드 내역
 
 ---
 
@@ -166,8 +169,10 @@ print('Hello World!')
 ### 7. 인용문
 
 - 주석이나 인용 문구 표현
+
 - `>`를 사용
-- 예시
+
+  > 예시
 
 ```markdown
 > 인용문을 작성합니다.

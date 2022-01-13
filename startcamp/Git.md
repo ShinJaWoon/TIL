@@ -1,5 +1,13 @@
 # Git
 
+[1. Git을 이용한 버전 관리](#1.-git을-이용한-버전-관리)
+
+[2. Github를 이용한 포트폴리오](#2.-github를-이용한-포트폴리오)
+
+[3. Git 설명](#3.-git-설명)
+
+
+
 ## 1. Git을 이용한 버전 관리
 
 * **Git** : (분산) 버전 관리 프로그램
@@ -62,6 +70,8 @@
   * 프로그램 백업에 용이
 
 ---
+
+
 
 
 
@@ -158,9 +168,9 @@ C.txt
 
 ![image-20220113160332088](Git.assets/image-20220113160332088.png)
 
-`window + shift + s`: 화면캡쳐
-
 ---
+
+
 
 
 
@@ -176,6 +186,8 @@ C.txt
   * unmodified : 표시되지 않음
 
 ---
+
+
 
 
 
@@ -203,11 +215,6 @@ C.txt
 
 * `git commit -m '메세지'`  : commit 할 때 한 줄 주석 추가
 
-* `git remote add origin 원격저장소주소` : Git 원격 저장소 주소 설정
-
-  * .git은 생략 가능
-  * **origin**은 conventional 한 주소별명. 바꿀 수도 있다.
-
 * `git push -u origin master` : push
 
 ---
@@ -217,6 +224,11 @@ C.txt
 * `git config --global user.name "git 이름"` : git 유저 네임 설정
 
 * `git config --global -ㅣ`  : 설정 확인
+
+* `git remote add origin 원격저장소주소` : Git 원격 저장소 주소 설정
+
+  * .git은 생략 가능
+  * **origin**은 conventional 한 주소별명. 바꿀 수도 있다.
 
 * `git remote -v` : remote 주소 정보 확인
 
