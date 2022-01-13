@@ -61,7 +61,7 @@
   * 변경점이 분산점마다 따로 저장
   * 프로그램 백업에 용이
 
-
+---
 
 
 
@@ -78,7 +78,7 @@
 
 
 
-### Git 작업공간
+### Git 구조
 
 **Day1**
 
@@ -160,6 +160,10 @@ C.txt
 
 `window + shift + s`: 화면캡쳐
 
+---
+
+
+
 ### Git 상태
 
 * **untracked** : 관리되지 않고 있는 대상. 
@@ -167,9 +171,11 @@ C.txt
   * Working Directory에 처음으로 관리되는 대상
   * Staging Area에 올라가기 전 상태
 * **tracked** : 관리되고 있는 대상
-  * modified : 녹색으로 표시
+  * modified : add 되면 녹색으로 표시, add 전에는 빨간색으로 표시
     * 이전에 git에 올라가있었지만 수정된 파일
-  * unmodified : 
+  * unmodified : 표시되지 않음
+
+---
 
 
 
