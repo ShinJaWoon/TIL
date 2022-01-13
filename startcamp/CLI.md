@@ -5,7 +5,7 @@
 ## 기본 표현
 
 * `~` : **홈 디렉토리** (현재 로그인된 사용자의 홈 폴더를 의미)
-  * 내 컴퓨터 홈 디렉토리: `C:\Users\jawoonshin`
+  * 내 컴퓨터 홈 디렉토리: `C:\Users\HongGilDong
 
 * `/` : **루트 디렉토리** (모든 파일과 폴더를 담고 있는 최상위 폴더) 
   * `C:`
@@ -28,7 +28,7 @@
 
   ```bash
   $ touch 파일명.확장자명
-  $ touch ShinJaWoon.txt
+  $ touch HongGilDong.txt
   ```
 
 * **확장자명**을 붙이지 않으면 그냥 파일로 생성
@@ -41,13 +41,13 @@
 
   ```bash
   $ mkdir 폴더명 
-  $ mkdir ShinJaWoon
+  $ mkdir HongGilDong
   
   $ mkdir '폴더명을 띄워쓰고 싶을 때 따옴표로 작성'
-  $ mkdir 'Shin Ja Woon'
+  $ mkdir 'Hong Gil Dong'
   
   $ mkdir 폴더의경로를/상대경로로/지정할수있음
-  $ mkdir ShinJaWoon/Shin/JaWoon
+  $ mkdir HongGilDong/Hong/GilDong
   ```
 
 
