@@ -1,5 +1,11 @@
 # Git
 
+> 기초적인 단계적 설명은 Git_standard.md 문서를 참조할 것.
+
+[Git_standard](Git_standard.md)
+
+
+
 [1. Git을 이용한 버전 관리](#1-git을-이용한-버전-관리)
 
 [2. Github를 이용한 포트폴리오](#2-github를-이용한-포트폴리오)
@@ -12,7 +18,7 @@
 
 ## 1. Git을 이용한 버전 관리
 
-* **Git** : (분산) 버전 관리 프로그램
+* **Git** : (분산) 버전 관리 프로그램 (DVCS: Distribution Version Control System)
 
   - **버전** : 컴퓨터 소프트웨어의 특정 상태
   - **관리** : 어떤 일의 사무, 시설이나 물건의 유지, 개량
@@ -179,9 +185,9 @@ C.txt
   * Working Directory에 처음으로 관리되는 대상
   * Staging Area에 올라가기 전 상태
 * **tracked** : 관리되고 있는 대상
-  * modified : add 되면 녹색으로 표시, add 전에는 빨간색으로 표시
-    * 이전에 git에 올라가있었지만 수정된 파일
-  * unmodified : 표시되지 않음
+  * New file : git으로 관리되지 않았던 파일이 Staging Area에 등록되었을 때 확인할 수 있음
+  * modified : git으로 관리되는데 수정된 파일이 Staging Area에 등록되었을 때 확인할 수 있음
+
 
 ---
 
@@ -193,7 +199,13 @@ C.txt
 
 * `git status`  : 폴더의 git 상태 표시
 
+* `git log` : commit log 표시
+
+  * `git log --oneline` : log를 한줄로 축약해서 표시
+
 * `git add`  : Working Directory --> Stage Area
+
+  * `git add .` : 현재 폴더 전부 add
 
 * `git commit`  : Stage Area --> Local Repository
 
@@ -212,6 +224,18 @@ C.txt
 * `git commit -m '메세지'`  : commit 할 때 한 줄 주석 추가
 
 * `git push -u origin master` : push
+
+  * `-u origin master`를 치고 난 이후에는`git push`로도 push는 가능
+
+* `git clone remote레포주소` : 아무것도 없을 때 내려받기
+
+* `git pull origin(별명) master(브랜치명)` : git설정 및 remote 설정이 있을 때 내려받기
+
+  * git 에서 충돌이 일어날 때
+
+    `git stash `
+
+
 
 ---
 
