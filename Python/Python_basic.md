@@ -8,11 +8,11 @@
 
 [기초 문법](#기초-문법)
 
-[파이썬 자료형 (Python Datatype)](#파이썬-자료형 (python-datatype))
+[파이썬 자료형 (Python Datatype)](#파이썬-자료형-python-datatype)
 
-[컨테이너(Container)](#컨테이너(container))
+[컨테이너(Container)](#컨테이너container)
 
-[연산자(Operator)](#연산자(operator))
+[연산자(Operator)](#연산자operator)
 
 ## 파이썬 개발 환경 (Python Environment)
 
@@ -122,15 +122,15 @@ name = input('블라블라')
 
 ## 파이썬 자료형 (Python Datatype)
 
-[불린(Boolean)](#불린(boolean))
+[불린(Boolean)](#불린boolean)
 
-[정수(Int)](#정수(int))
+[정수(Int)](#정수int)
 
-[실수(Float)](#실수(float))
+[실수(Float)](#실수float)
 
-[복소수(Complex)](#복소수(complex))
+[복소수(Complex)](#복소수complex)
 
-[문자열(String Type)](#문자열(string-type))
+[문자열(String Type)](#문자열string-type)
 
 ### 자료형 분류
 
@@ -266,19 +266,19 @@ print(f'Hello, {x}, {y})	# Python 3.6+
     - 세트
     - 딕셔너리
 
-[리스트(List)](#리스트(list))
+[리스트(List)](#리스트list)
 
-[튜플(Tuple)](#튜플(tuple))
+[튜플(Tuple)](#튜플tuple)
 
-[레인지(Range)](#레인지(range))
+[레인지(Range)](#레인지range)
 
-[셋(Set)](#셋(set))
+[셋(Set)](#셋set)
 
-[딕셔너리(Dictionary)](#딕셔너리(dictionary))
+[딕셔너리(Dictionary)](#딕셔너리dictionary)
 
-[패킹/언패킹(Packing/Unpacking)](#패킹/언패킹(packing/unpacking))
+[패킹/언패킹(Packing/Unpacking)](#패킹언패킹packingunpacking)
 
-[형 변환(Typecasting)](#형-변환(typecasting))
+[형 변환(Typecasting)](#형-변환typecasting)
 
 
 

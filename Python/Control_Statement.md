@@ -1,8 +1,8 @@
 # 제어문(Control Statement)
 
-[조건문(Conditional Statement)](#조건문(conditional-statement))
+[조건문(Conditional Statement)](#조건문conditional-statement)
 
-[반복문(Loop Statement)](#반복문(loop-statement))
+[반복문(Loop Statement)](#반복문loop-statement)
 
 ## 조건문(Conditional Statement)
 
