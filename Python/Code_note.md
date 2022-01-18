@@ -11,6 +11,9 @@ print(변수명, type(변수명))
 print('{}{}'.format( , ))
 print(f'{변수이름}')  --> 변수가 바로 줄력됨
 
+# 같은줄에 계속 출력
+print('', end = "")
+
 
 
 import random
@@ -33,9 +36,16 @@ import random
 
 # 여러 입력을 정수로 변환해 리스트로 저장하는 방법
 변수 = list(map(int, input().split(",")))
+a, b = map(int, input().split(' ')
 
 # 딕셔너리 키 밸류 따로 for 문 돌리는 법
 for key, value in data.items():
+           
+# 날짜, 시간 함수
+import datetime
+today = datetime.datetime.now()
+print(today)
+print(f'오늘은 {today:%y}년 {today:%m}월 {today:%d}일 {today:%A}')           
 
 # 가변형 인자
 def 함수명(*x):
@@ -62,6 +72,19 @@ class class_name:
     
     def function(self):
         return self.one * self.two
+
+           
+# 버블 정렬
+# 인접한 두 수를 비교하여 큰 수를 맨 뒤로 보낸다.
+# 한 번 루프가 돌면 맨 끝에 가장 큰 수가 가게 된다.
+# 첫 번째 for문이 한 번 돌 때마다 맨 뒤에 정렬되는 숫자가 하나씩 늘어나므로
+# 두 번째 for문에서는 첫 번째 for 문이 돈 수만큼 돌지 않아도 된다.
+# 첫 번째 루프는 리스트 길이 만큼 돌기 위함
+# 두 번째 루프는 비교하며 바꾸기 위함
+for i in range(num_len-1):
+    for j in range(num_len-i-1):
+        if numbers[j] > numbers[j+1]:
+            numbers[j], numbers[j+1] = numbers[j+1], numbers[j]
 
 ```
 

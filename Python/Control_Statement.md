@@ -120,3 +120,7 @@ result = list(enumerate(data), start=1)
 
 - 반복문이 끝까지 실행되면 (for문이 전부 순회하면) 실행
 - break로 중단되면 실행되지 않음
+
+
+
+## comprehension

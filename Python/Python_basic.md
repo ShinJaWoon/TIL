@@ -12,6 +12,8 @@
 
 [컨테이너(Container)](#컨테이너container)
 
+[형 변환(Typecasting)](#형-변환typecasting)
+
 [연산자(Operator)](#연산자operator)
 
 ## 파이썬 개발 환경 (Python Environment)
@@ -164,7 +166,7 @@ bool()		# True / False 검증
 
 bool(-1)	# True
 bool([0])	# True
-bool(' ')	# False (공백 하나는 False)
+bool('')	# False (공백 하나가 있으면 True)
 bool([])	# False
 ```
 
@@ -249,8 +251,10 @@ for char in a:	# 문자 하나씩 접근은 가능
 print('Hello, %s' % x) 		# %s 문자, %d 정수, %f 실수
 print('Hello, {}, {}'.format(x, y))
 print(f'Hello, {x}, {y})	# Python 3.6+
-      						# {x : .3} 소수점표기
+      						# {x:.3f} 소수점표기
       						# {x * 2} 연산 가능
+      						# {x:0>10.2f} --> 10자리 표기, 소수점은 2째자리까지
+      						# 0으로 나머지를 채운다. >는 우측정렬 ^는 가운데정렬
 ```
 
 ---
@@ -381,11 +385,13 @@ a = { 'x': 1, 'y': 'k', 75: [1, 2, 3]}
 
 
 
-### 형 변환(Typecasting)
+## 형 변환(Typecasting)
 
 - 암시적 형 변환(Implicit) : 사용자 의도하지 않고, 파이썬 내부적으로 자료형 변환
   - `True` = 1
   - `int` + `float` = `float`
+  - `int` + `complex`  =  `complex`
+  - `float` + `complex` = `complex`
 - 명시적 형 변환(Explicit) : 사용자가 의도적으로 변환
   - int
     - str*(정수로 적힌 문자열만), float
@@ -403,6 +409,25 @@ a = { 'x': 1, 'y': 'k', 75: [1, 2, 3]}
 | **range**      | o      | o              | o              | -     | o              | x          |
 | **set**        | o      | o              | o              | x     | -              | x          |
 | **dictionary** | o      | o<br />(key만) | o<br />(key만) | x     | o<br />(key만) | -          |
+
+#### 기타
+
+- trailing comma: 리스트나 딕셔너리 등의 요소를 엔터로 구분하며 입력할 때 끝에 `,`를 붙인다.
+
+  ```python
+  a = {
+      0 : 1,
+      1 : 2,
+      2 : 3,  # trailing comma를 넣어준다.   
+  }
+  
+  ```
+
+  
+
+
+
+
 
 ---
 
@@ -478,6 +503,7 @@ a = { 'x': 1, 'y': 'k', 75: [1, 2, 3]}
 
 - 표현식 (Expression) 
   - 새로운 값을 생성하거나 계산하는 코드 조각
+  - 그 자체를 값으로 사용할 수 있는 것.
 - 문장 (Statement) 
   - 특정 작업을 수행하는 코드 전체
   - 파이썬이 실행 가능한 최소한의 코드 단위
