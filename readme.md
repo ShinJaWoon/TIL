@@ -15,3 +15,5 @@
 2. [Python 기초](Python/Python_basic.md)
 3. [제어문](Python/Control_Statement.md)
 
+4. [함수](Python/Function.md)
+5. [모듈](Python/Module.md)
