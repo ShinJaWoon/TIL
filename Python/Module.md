@@ -84,12 +84,9 @@ $ pip install -r requirement.txt
 
 ```bash
 # 보통 폴더명은 venv로 한다.
-$ python -m venv <폴더명>
-$ source <폴더경로>/Scripts/activate
-
-# 만약 가상환경 폴더 상위 폴더에서 실행한다면 ex) ~/Desktop/projectA 
-# (projectA/venv 가 있는 상황)
+$ python -m venv venv
 $ source venv/Scripts/activate
+# 가상환경 폴더 상위 폴더에서 실행
 ```
 
 
@@ -116,10 +113,14 @@ $ source venv/Scripts/activate
   from package import module
   from package.module import var, function, Class
   
+  # 서로 다른 패키지의 이름이 같은 패키지 사용
+  from package.subpackage_1 import module_a
+  from package.subpackage_2 import module_a as module_b
+  
   # 상위 패키지나 다른 서브 패키지 사용
   from ..up_package import module
   from first_package.second_package.third_package import module
   ```
-
+  
   
 

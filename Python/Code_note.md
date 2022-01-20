@@ -1,4 +1,9 @@
 ```python
+## VS code
+# alt + shift + 방향키 = 복사
+# alt + 방향키 = 이동
+
+
 # 변수명을 잘못 적었을 경우 ex) print
 # 변수명을 지우고 실행시킨다.
 del 변수명
@@ -26,7 +31,9 @@ import random
 # data에서 갯수만큼 뽑는 코드
 변수 = random.sample(data, 갯수)
 
-
+# sum 활용, 2차원 1차원으로 만들기
+a = sum(순환객체, 시작값)
+# 시작값은 기본 0, []로 설정하면 2차원을 1차원으로 바꾼다.
 
 # 수열 리스트로 저장
 변수 = list(range(시작, 끝+1))
@@ -123,6 +130,17 @@ for i in range(num_len-1):
     for j in range(num_len-i-1):
         if numbers[j] > numbers[j+1]:
             numbers[j], numbers[j+1] = numbers[j+1], numbers[j]
+
+            
+# 행렬 회전
+print('------전치--------')
+lst2 = list(map(list, zip(*lst)))
+
+print('------반시계90도--------')
+lst3 = list(map(list, zip(*lst)))[::-1]
+
+print('------시계90도--------')
+lst4 = list(map(list, zip(*lst[::-1])))
 
 ```
 

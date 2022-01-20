@@ -66,9 +66,8 @@ $ git status		// WD, SA 의 상태를 확인하기 위한 명령어
   - 제외하고 싶은 파일을 등록
   - 파일명을 적어주면 끝
 
-- gitignore.io 를 이용하면 편하게 gitignore 파일을 작성할 수 있음
-
-  - 단, 우리가 생성한 파일은 우리가 직접 등록해야함 (ex) 단순 참고용도인 파일들
+- [gitignore.io](https://www.toptal.com/developers/gitignore) 를 이용하면 편하게 gitignore 파일을 작성할 수 있음
+- 단, 우리가 생성한 파일은 우리가 직접 등록해야함 (ex) 단순 참고용도인 파일들
 
 
 
