@@ -8,32 +8,8 @@ import time
 start = time.time()
 # print(time.time()-start)
 
-def check(n):
-    h = n // 100
-    t = n // 10 - h*10
-    u = n % 10
-
-    if (h-t) == (t-u):
-        return 1
-    else:
-        return 0
-
-def hundreds(n):
-    cnt = 0
-    for i in range(100, n+1):
-        cnt += check(i)
-    return cnt + 99
-
-
-
-N = int(input())
-if N < 100:
-    print(N)
-else:
-    print(hundreds(N))
-
-
-            
+c = input()
+print(sum(list(map(int,input()))))            
 
 
 

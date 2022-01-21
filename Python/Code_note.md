@@ -142,5 +142,38 @@ lst3 = list(map(list, zip(*lst)))[::-1]
 print('------시계90도--------')
 lst4 = list(map(list, zip(*lst[::-1])))
 
+##파일 열기
+with open('파일명') as f:
+    read_data = f.read
+f.close()
+
+
+# 예제 입력, 출력
+import sys
+sys.stdin = open('input.txt', 'r')
+sys.stdout = open('output.txt', 'w')
+
+# 예제 시간 측정
+import time
+start = time.time()
+print(time.time()-start)
+
+
+import json
+x = [1, 2, 3]
+x.json.dump
+
+
+# 딕셔너리 접근 방법
+dict.get(key, default)	# None 값으로 들어감
+dict.get(key, <임의값>)	# 임의 값이 들어감
+
+# 파일 열기
+a_json = open('<파일위치>.json', encoding='UTF8')
+a = json.load(a_json)
+
+# 딕셔너리 키 바꾸기
+dictionary[new_key] = dictionary[old_key]
+del dictionary[old_key]
 ```
 

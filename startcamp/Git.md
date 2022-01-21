@@ -60,13 +60,13 @@ $ git status		// WD, SA 의 상태를 확인하기 위한 명령어
   - 개인 컴퓨터 설정파일 (OS에서 활용되는 파일)
   - IDE 환경 설정 파일 ( .ideal/ )
   - 가상환경 폴더 및 파일 ( venv/ )
-
 - `.gitignore` 파일을 생성 (확장자는 따로 없음)
 
   - 제외하고 싶은 파일을 등록
   - 파일명을 적어주면 끝
-
 - [gitignore.io](https://www.toptal.com/developers/gitignore) 를 이용하면 편하게 gitignore 파일을 작성할 수 있음
+  - Windows, Python, Visual Studio Code
+
 - 단, 우리가 생성한 파일은 우리가 직접 등록해야함 (ex) 단순 참고용도인 파일들
 
 
