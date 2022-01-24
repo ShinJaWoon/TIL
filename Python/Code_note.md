@@ -52,6 +52,11 @@ a = sum(순환객체, 시작값)
 변수 = list(map(int, input().split(",")))
 # split() 안에 아무것도 안넣으면 공백 여러개나 엔터도 처리해준다.
 a, b = map(int, input().split())
+
+# 숫자 리스트를 하나씩 띄어서 출력
+result = ' '.join(map(str, list))
+
+
 """
 data = []
 for i in range(n):
