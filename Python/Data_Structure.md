@@ -211,4 +211,7 @@
 
 ### 깊은 복사(Deep Copy)
 
-- `b = copy.deepcopy(a)`
+```python
+import copy
+b = copy.deepcopy(a)
+```

@@ -180,5 +180,30 @@ a = json.load(a_json)
 # 딕셔너리 키 바꾸기
 dictionary[new_key] = dictionary[old_key]
 del dictionary[old_key]
+
+# 2차원 배열 선언
+result = [[0]*column for i in range(row)]
+
+# 지그재그 2차원 인덱싱
+num2 는 계단 길이
+def zigzag_right(num):
+    result = [[-1]*len(num[0]) for i in range(len(num))]
+        
+    for i in range(len(num)):
+        for j in range(num2):
+            if i*(num2-1)+j >= len(num[0]):
+                break
+            result[i][(i*(num2-1)+j)] = num[i][(i*(num2-1)+j)]
+    pprint(result)
+
+def zigzag_bottom(num):
+    result = [[-1]*len(num[0]) for i in range(len(num))]
+        
+    for i in range(len(num[0])):
+        for j in range(num2):
+            if i*(num2-1)+j >= len(num):
+                break
+            result[i*(num2-1)+j][i] = num[i*(num2-1)+j][i]
+    pprint(result)
 ```
 
