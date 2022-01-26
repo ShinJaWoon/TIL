@@ -3,23 +3,25 @@
 > - Abstraction : 복잡한 내용을 모르더라도(블랙박스) 사용가능하도록 하는 것
 > - 재사용성 / 가독성 / 생산성
 
-[함수 기초](#함수-기초)
-
-[함수의 결과값(Output)](#함수의-결과값output)
-
-[함수의 입력(Input)](#함수의-입력input)
-
-[함수의 범위(Scope)](#함수의-범위scope)
-
-[함수의 문서화(Doc-string)](#함수의-문서화doc-string)
-
-[함수 응용](#함수-응용)
-
-<br>
+> [함수 기초](#함수-기초)
+>
+> [함수의 결과값(Output)](#함수의-결과값output)
+>
+> [함수의 입력(Input)](#함수의-입력input)
+>
+> [함수의 범위(Scope)](#함수의-범위scope)
+>
+> [함수의 문서화(Doc-string)](#함수의-문서화doc-string)
+>
+> [함수 응용](#함수-응용)
 
 <br>
 
 ## 함수 기초
+
+> [함수의 정의](#함수의-정의)
+>
+> [선언과 호출(define & call)](#선언과-호출define-&-call)
 
 ### 함수의 정의
 
@@ -37,10 +39,15 @@
 >       return returning_value
 >   ```
 >
-> ### 선언과 호출(define & call)
->
+
+<br>
+
+### 선언과 호출(define & call)
+
 > - 선언: `def` 키워드
 > - 호출: `함수명()`
+
+---
 
 <br>
 
@@ -58,9 +65,19 @@
 >   - return 뒤에 값이 여러 개일 경우 튜플로 묶어서 반환
 > - return 을 통해 함수를 빠져나갈 수 있다.
 
+---
+
 <br><br>
 
 ## 함수의 입력(Input)
+
+>[Parameter와 Argument](#parameter와-argument)
+>
+>[Argument](#argument)
+>
+>[정해지지 않은 여러 개의 Arguments](#정해지지-않은-여러-개의-arguments)
+
+<br>
 
 ### Parameter와 Argument
 
@@ -153,9 +170,23 @@
 > > def func(x=0, y): 	# SyntaxError
 > > ```
 
+---
+
 <br><br>
 
 ## 함수의 범위(Scope)
+
+> [함수의 범위(Scope)](#함수의-범위scope)
+>
+> [이름 검색 규칙(Name Resolution)](#이름-검색-규칙name-resolution)
+>
+> [global문](#global문)
+>
+> [nonlocal](#nonlocal)
+>
+> [범위 확인하기](#범위-확인하기)
+
+<br>
 
 ### 함수의 범위(Scope)
 
@@ -237,9 +268,17 @@
 > - `locals()`: local namespace를 정리
 > - `globals()`: global, local, builtin 정보 모두 딕셔너리로 정리
 
+---
+
 <br><br>
 
 ## 함수의 문서화(Doc-string)
+
+> [Docstring (Document String)](#docstring-document-string)
+>
+> [Naming Convention](#naming-convention)
+
+<br>
 
 ### Docstring (Document String)
 
@@ -263,9 +302,23 @@
 >
 > - 가급적 약어 사용 지양
 
+---
+
 <br><br>
 
 ## 함수 응용
+
+> [map](#map)
+>
+> [filter](#filter)
+>
+> [zip](#zip)
+>
+> [lambda 함수](#lambda-함수)
+>
+> [재귀 함수(recursive function)](#재귀-함수recursive-function)
+
+<br>
 
 ### map
 

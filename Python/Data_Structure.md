@@ -1,18 +1,22 @@
 # 데이터 구조(Data Structure)
 
-[문자열(String)](#문자열string)
+> [순서가 있는 데이터 구조](#순서가-있는-데이터-구조)
+>
+> [순서가 없는 데이터 구조](#순서가-없는-데이터-구조)
+>
+> [얕은 복사와 깊은 복사](#얕은-복사와-깊은-복사)
 
-[리스트(List)](#리스트list)
-
-[튜플(Tuple)](#튜플tuple)
-
-[셋(Set)](#셋set)
-
-[딕셔너리(Dictionary)](#딕셔너리dictionary)
-
-[얕은 복사와 깊은 복사](#얕은-복사와-깊은-복사)
+<br>
 
 ## 순서가 있는 데이터 구조
+
+>[문자열(String)](#문자열string)
+>
+>[리스트(List)](#리스트list)
+>
+>[튜플(Tuple)](#튜플tuple)
+
+<br>
 
 ### 문자열(String)
 
@@ -53,17 +57,17 @@
 >   ```python
 >   s.replace(old, new[, count])	# 바꿀 대상 글자를 새로운 글자로 바꿔서 반환
 >   s.replace(old, new, count=1)	# count는 해당 개수만큼 시행 (선택)
->           
+>                 
 >   s.strip([chars])				# 공백이나 특정 문자 제거
 >   s.lstrip() / s.rstrip()			# 왼쪽 / 오른쪽 공백 제거
->           
+>                 
 >   s.split(sep=None, maxsplit=-1)	# 공백이나 특정 문자기준으로 분리
 >   								# sep = None인 경우 연속된 공백을 단일 공백으로 간주
 >       							# maxsplit = -1인 경우 제한 없음
->                   
+>                         
 >   'seperator'.join([iterable])	# 구분자'seperator'로 iterable 합침
 >   								# 문자열만 가능. int는 불가능하다.
->           
+>                 
 >   s.capitalize()					# 첫글자를 대문자로, 나머지는 소문자로
 >   s.title							# ' 혹은 공백 이후를 대문자로
 >   s.upper()						# 모두 대문자로
@@ -112,9 +116,19 @@
 > 
 > ```
 
+---
+
 <br><br>
 
 ## 순서가 없는 데이터 구조
+
+> [셋(Set)](#셋set)
+>
+> [딕셔너리(Dictionary)](#딕셔너리dictionary)
+>
+> [얕은 복사와 깊은 복사](#얕은-복사와-깊은-복사)
+
+<br>
 
 ### 셋(Set)
 
@@ -166,9 +180,21 @@
 > d.clear()				# 모두 삭제
 > ```
 
+---
+
 <br><br>
 
 ## 얕은 복사와 깊은 복사
+
+> [복사방법](#복사방법)
+>
+> [할당](#할당)
+>
+> [얕은 복사(Shallow Copy)](#얕은-복사shallow-copy)
+>
+> [깊은 복사(Deep Copy)](#깊은-복사deep-copy)
+
+<br>
 
 ### 복사방법
 
@@ -217,3 +243,6 @@
 > import copy
 > b = copy.deepcopy(a)
 > ```
+
+---
+

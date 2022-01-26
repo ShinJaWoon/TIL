@@ -6,17 +6,17 @@
 > - 인터프리터 언어(Interpreter)
 > - 객체 지향 프로그래밍
 
-[기초 문법](#기초-문법)
+> [기초 문법](#기초-문법)
+>
+> [파이썬 자료형 (Python Datatype)](#파이썬-자료형-python-datatype)
+>
+> [컨테이너(Container)](#컨테이너container)
+>
+> [형 변환(Typecasting)](#형-변환typecasting)
+>
+> [연산자(Operator)](#연산자operator)
 
-[파이썬 자료형 (Python Datatype)](#파이썬-자료형-python-datatype)
-
-[컨테이너(Container)](#컨테이너container)
-
-[형 변환(Typecasting)](#형-변환typecasting)
-
-[연산자(Operator)](#연산자operator)
-
-<br><br>
+<br>
 
 ## 기초 문법
 
@@ -25,6 +25,10 @@
 > - 스타일가이드의 경우 모든 사람이 같은 코드를 동일하게 작성할 수 있게 해줌
 >
 >   ex) '', "" 를 혼용하지 않는다, 띄어쓰기, 여백
+
+> [들여쓰기(Identation)](#들여쓰기identation)
+>
+> [변수(Variable)](#변수variable)
 
 <br>
 
@@ -109,23 +113,29 @@
 > >
 > >VS Code 등에서는 `ctrl + /`으로 여러줄 주석 가능
 
-<br>
-
-<br>
-
 ---
+
+<br>
+
+<br>
 
 ## 파이썬 자료형 (Python Datatype)
 
-[불린(Boolean)](#불린boolean)
+> [자료형 분류](#자료형-분류)
+>
+> [None](#none)
+>
+> [불린(Boolean)](#불린boolean)
+>
+> [정수(Int)](#정수int)
+>
+> [실수(Float)](#실수float)
+>
+> [복소수(Complex)](#복소수complex)
+>
+> [문자열(String Type)](#문자열string-type)
 
-[정수(Int)](#정수int)
-
-[실수(Float)](#실수float)
-
-[복소수(Complex)](#복소수complex)
-
-[문자열(String Type)](#문자열string-type)
+<br>
 
 ### 자료형 분류
 
@@ -276,19 +286,19 @@
 >   > - 세트
 >   > - 딕셔너리
 
-[리스트(List)](#리스트list)
-
-[튜플(Tuple)](#튜플tuple)
-
-[레인지(Range)](#레인지range)
-
-[셋(Set)](#셋set)
-
-[딕셔너리(Dictionary)](#딕셔너리dictionary)
-
-[패킹/언패킹(Packing/Unpacking)](#패킹언패킹packingunpacking)
-
-[형 변환(Typecasting)](#형-변환typecasting)
+> [리스트(List)](#리스트list)
+>
+> [튜플(Tuple)](#튜플tuple)
+>
+> [레인지(Range)](#레인지range)
+>
+> [셋(Set)](#셋set)
+>
+> [딕셔너리(Dictionary)](#딕셔너리dictionary)
+>
+> [패킹/언패킹(Packing/Unpacking)](#패킹언패킹packingunpacking)
+>
+> [형 변환(Typecasting)](#형-변환typecasting)
 
 <br>
 
@@ -397,6 +407,8 @@
 > ```
 >
 
+---
+
 <br><br>
 
 ## 형 변환(Typecasting)
@@ -449,13 +461,29 @@
 > ```
 >
 
-<br><br>
-
 ---
+
+<br><br>
 
 ## 연산자(Operator)
 
-### 산술 연산자 (Airthmetic Operator)
+>[산술 연산자 (Airthmetic Operator)](#산술-연산자airthmetic-operator)
+>
+>[비교 연산자(Comparison Operator)](#비교-연산자comparison-operator)
+>
+>[논리 연산자(Logical Operator)](#논리-연산자logical-operator)
+>
+>[멤버십 연산자(Membership Operator)](#멤버십-연산자membership-operator)
+>
+>[시퀀스형 연산자(Sequence Type Operator)](#시퀀스형-연산자sequence-type-operator)
+>
+>[set 연산자](#set-연산자)
+>
+>[연산자 우선순위](#연산자-우선순위)
+
+<br>
+
+### 산술 연산자(Airthmetic Operator)
 
 > - `+` `-` `*` `/` : 사칙연산
 > - `//` : 몫
@@ -532,6 +560,8 @@
 > 10. `and`
 > 11. `or`
 
+---
+
 <br><br>
 
 ## 프로그램 구성 단위
@@ -579,3 +609,6 @@
 > - 라이브러리 (Library)
 >
 >   > 패키지 모음
+
+---
+

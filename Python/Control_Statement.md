@@ -1,10 +1,26 @@
 # 제어문(Control Statement)
 
-[조건문(Conditional Statement)](#조건문conditional-statement)
+> [조건문(Conditional Statement)](#조건문conditional-statement)
+>
+> [반복문(Loop Statement)](#반복문loop-statement)
 
-[반복문(Loop Statement)](#반복문loop-statement)
+
+
+<br>
 
 ## 조건문(Conditional Statement)
+
+>[](#)
+>
+>[](#)
+>
+>[](#)
+>
+>[](#)
+
+
+
+<br>
 
 ### 조건문
 
@@ -67,11 +83,23 @@
 >```
 >
 
+---
+
 <br><br>
 
 ## 반복문(Loop Statement)
 
-[Python Tutor](https://pythontutor.com/visualize.html#mode=edit)
+> [Python Tutor](https://pythontutor.com/visualize.html#mode=edit)
+>
+> [While문](#while문)
+>
+> [For문](#for문)
+>
+> [enumerate 순회](#enumerate-순회)
+>
+> [반복문 제어](#반복문-제어)
+
+<br>
 
 ### While문
 
@@ -124,23 +152,23 @@
 
 ### 반복문 제어
 
-#### break
+> #### break
+>
+> > - 반복문을 멈추고 나감
+>
+> #### continue
+>
+> > - continue 다음의 실행문은 무시하고 다시 반복문 시작
+>
+> #### pass
+>
+> > - 동작이 없을 때 자리 채우는 용도
+> > - 반복문 아니라도 사용 가능
+>
+> #### else
+>
+> > - 반복문이 끝까지 실행되면 (for문이 전부 순회하면) 실행
+> > - break로 중단되면 실행되지 않음
 
-> - 반복문을 멈추고 나감
-
-#### continue
-
-> - continue 다음의 실행문은 무시하고 다시 반복문 시작
-
-#### pass
-
-> - 동작이 없을 때 자리 채우는 용도
-> - 반복문 아니라도 사용 가능
-
-#### else
-
-> - 반복문이 끝까지 실행되면 (for문이 전부 순회하면) 실행
-> - break로 중단되면 실행되지 않음
-
-
+---
 
