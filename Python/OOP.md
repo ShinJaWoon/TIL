@@ -98,7 +98,7 @@
 >
 > #### 인스턴스 메소드
 >
-> > - 인스턴스 변수를 사용/변경하는 메소드
+> > - 인스턴스의 속성을 사용/변경하는 메소드
 > > - 호출 시, 첫번째 인자로 인스턴스 자기자신(self) 전달
 > >
 > > ```python
@@ -187,10 +187,10 @@
 > >
 > >   ```python
 > >   class MyClass:
-> >       
+> >         
 > >       @staticmethod
 > >       def class_method():
-> >       
+> >         
 > >   MyClass.class_method()
 > >   ```
 
