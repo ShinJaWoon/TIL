@@ -20,6 +20,8 @@
 >
 > [메소드 정리](#메소드-정리)
 
+<br>
+
 ### 객체지향 프로그래밍
 
 > #### 객체란?
@@ -87,112 +89,110 @@
 
 ### 인스턴스
 
-> - 인스턴스 변수
+> #### 인스턴스 변수
 >
->   > - 인스턴스가 개인적으로 가지는 속성(attribute)
->   > - 각 인스턴스들의 고유한 변수
->   > - 생성자 메소드에서 `self.<name>` 으로 정의
->   > - 인스턴스 생성 이후 `<instance>.<name>`으로 접근, 할당
+> > - 인스턴스가 개인적으로 가지는 속성(attribute)
+> > - 각 인스턴스들의 고유한 변수
+> > - 생성자 메소드에서 `self.<name>` 으로 정의
+> > - 인스턴스 생성 이후 `<instance>.<name>`으로 접근, 할당
 >
-> - 인스턴스 메소드
+> #### 인스턴스 메소드
 >
->   > - 인스턴스 변수를 사용/변경하는 메소드
->   > - 호출 시, 첫번째 인자로 인스턴스 자기자신(self) 전달
->   >
->   > ```python
->   > class MyClass:
->   >     def instance_method(self):
->   > 
->   > my_instance = MyClass()
->   > my_instance.instance_method()
->   > # 실제로는 아래와 같이 동작
->   > # MyClass.instance_method(my_instance)
->   > ```
->   >
+> > - 인스턴스 변수를 사용/변경하는 메소드
+> > - 호출 시, 첫번째 인자로 인스턴스 자기자신(self) 전달
+> >
+> > ```python
+> > class MyClass:
+> >     def instance_method(self):
+> > 
+> > my_instance = MyClass()
+> > my_instance.instance_method()
+> > # 실제로는 아래와 같이 동작
+> > # MyClass.instance_method(my_instance)
+> > ```
+> >
 >
-> - self
+> #### self
 >
->   > - 인스턴스 자기자신
->   > - 인스턴스 메소드는 호출 시 첫 번째 인자로 자기자신 전달
->   > - 인스턴스 메소드 정의 시 첫 번째 매개변수를 self로 둔다.
->   > - 다른 단어를 써도 되지만 암묵적인 규칙
+> > - 인스턴스 자기자신
+> > - 인스턴스 메소드는 호출 시 첫 번째 인자로 자기자신 전달
+> > - 인스턴스 메소드 정의 시 첫 번째 매개변수를 self로 둔다.
+> > - 다른 단어를 써도 되지만 암묵적인 규칙
 >
-> - 생성자(constructor) 메소드
+> #### 생성자(constructor) 메소드
 >
->   > - 인스턴스 객체가 생성될 때 자동으로 호출되는 메소드
->   > - 인스턴스 변수들의 초기값 설정
->   >
->   > ```python
->   > class MyClass:
->   >     def __init__(self):
->   > ```
+> > - 인스턴스 객체가 생성될 때 자동으로 호출되는 메소드
+> > - 인스턴스 변수들의 초기값 설정
+> >
+> > ```python
+> > class MyClass:
+> >     def __init__(self):
+> > ```
 >
-> - 소멸자(destructor) 메소드
+> #### 소멸자(destructor) 메소드
 >
->   > - 인스턴스 객체가 소멸되기 직전에 호출되는 메소드
->   >
->   > ```python
->   > class MyClass:
->   >     def __del__(self):
->   > ```
+> > - 인스턴스 객체가 소멸되기 직전에 호출되는 메소드
+> >
+> > ```python
+> > class MyClass:
+> >     def __del__(self):
+> > ```
 >
-> - 매직 메소드(스페셜 메소드)
+> #### 매직 메소드(스페셜 메소드)
 >
->   > - Double underscore `__`가 있는 메소드
->   > - 특정 상황에 자동으로 불리는 메소드
->   >
->   > ```python
->   > __str__(self): 해당 객체의 출력 형태, 인스턴스 출력시 __str__의 return값 출력, str(<instance>)로 호출 가능
->   > __gt__(self, other): 부등호 연산자(>, greather than)
->   > ```
->   >
->   > - 부등호: lt(less than), le(less equal), eq, ge, ne 등
->   > - len, reversed 등 여러가지 존재
->   > - `dir(<instnace>)`로 확인 가능
->
+> > - Double underscore `__`가 있는 메소드
+> > - 특정 상황에 자동으로 불리는 메소드
+> >
+> > ```python
+> > __str__(self): 해당 객체의 출력 형태, 인스턴스 출력시 __str__의 return값 출력, str(<instance>)로 호출 가능
+> > __gt__(self, other): 부등호 연산자(>, greather than)
+> > ```
+> >
+> > - 부등호: lt(less than), le(less equal), eq, ge, ne 등
+> > - len, reversed 등 여러가지 존재
+> > - `dir(<instnace>)`로 확인 가능
 
 <br>
 
 ### 클래스
 
-> - 클래스 변수(클래스 속성)
+> #### 클래스 변수(클래스 속성)
 >
->   > - 한 클래스의 모든 인스턴스가 똑값은 값을 가지는 속성
->   >
->   > - `<classname>.<name>` 으로 접근 및 할당
+> > - 한 클래스의 모든 인스턴스가 똑값은 값을 가지는 속성
+> >
+> > - `<classname>.<name>` 으로 접근 및 할당
 >
-> - 클래스 메소드
+> #### 클래스 메소드
 >
->   >- 클래스가 사용할 메소드
->   >
->   >- `@classmethod` 데코레이터를 사용하여 정의
->   >
->   >- 호출 시, 첫 번째 인자로 클래스(cls) 전달
->   >
->   > ```python
->   > class MyClass:
->   >
->   >     @classmethod
->   >     def class_method(cls):
->   >
->   > MyClass.class_method()
->   > ```
+> >- 클래스가 사용할 메소드
+> >
+> >- `@classmethod` 데코레이터를 사용하여 정의
+> >
+> >- 호출 시, 첫 번째 인자로 클래스(cls) 전달
+> >
+> > ```python
+> > class MyClass:
+> >
+> >     @classmethod
+> >     def class_method(cls):
+> >
+> > MyClass.class_method()
+> > ```
 >
-> - 스태틱 메소드
+> #### 스태틱 메소드
 >
->   > - 인스턴스 변수, 클래스 변수를 전혀 다루지 않는 메소드
->   >
->   > - 속성을 다루지 않고 단지 기능만 하는 메소드를 정의할 때 사용
->   >
->   >   ```python
->   >   class MyClass:
->   >     
->   >       @staticmethod
->   >       def class_method():
->   >     
->   >   MyClass.class_method()
->   >   ```
->
+> > - 인스턴스 변수, 클래스 변수를 전혀 다루지 않는 메소드
+> >
+> > - 속성을 다루지 않고 단지 기능만 하는 메소드를 정의할 때 사용
+> >
+> >   ```python
+> >   class MyClass:
+> >       
+> >       @staticmethod
+> >       def class_method():
+> >       
+> >   MyClass.class_method()
+> >   ```
 
 <br>
 
@@ -258,26 +258,99 @@
 >```python
 >isinstance(object, classinfo)
 ># object가 classinfo의 instance이거나 subclass인 경우 True
+>
 >issubclass(class, classinfo)
 ># class가 classinfo의 subclass이면 True
 ># classinfo는 클래스 객체로 이루어진 튜플일 수 있다.
->super()
+>
+>super().
 ># 자식클래스에서 부모클래스를 사용하고 싶은 경우
+>
+>.mor
+># Method Resolution Order
+># 해당 인스턴스가 어떤 부모 클래스를 가지는지 확인하는 메소드
 >```
 >
+>#### 다중 상속
 >
+>> - 두개 이상의 클래스를 상속받은 경우
+>> - 중복된 속성이나 메서드의 경우 먼저 상속받은 순서대로 우선됨
 
 <br>
 
 ### 다형성
 
+>#### 다형성
 >
+>> - 동일한 메소드가 클래스에 따라 다르게 행동
+>
+>#### 메소드 오버라이딩
+>
+>> - 상속받은 메소드를 재정의
+>> - 부모클래스에서 정의한 메소드를 자식 클래스에서 변경
+>> - 부모클래스의 메소드를 실행시키고 싶은 경우 `super()`를 활용
 
 <br>
 
 ### 캡슐화
 
+>#### 캡슐화
 >
+>> - 객체의 일부 구현 내용에 대해 외부로부터 직접적인 액세스를 차단
+>> - 파이썬에서는 암묵적으로 존재하지만 언어적으로는 존재하지 않는 경우가 있음
+>
+>#### 접근제어자 종류
+>
+>> - Public Access Modifier
+>> - Protected  Access Modifier
+>> - Private  Access Modifier
+>
+>#### Public Member
+>
+>> - 언더바 없이 시작하는 메소드나 속성
+>> - 어디서나 호출 가능
+>> - 하위 클래스 override 허용
+>
+>#### Protected Member
+>
+>> - 언더바 1개 `_`로 시작하는 메소드나 속성
+>> - 암묵적 규칙에 의해 부모 클래스 내부와 자식 클래스에서만 호출 가능
+>> - 하위 클래스 override 허용
+>
+>#### Private Member
+>
+>> - 언더바 2개 `__`로 시작하는 메소드나 속성
+>> - 본 클래스 내부에서만 사용이 가능
+>> - 하위 클래스 상속 및 호출 불가능 (오류)
+>> - 외부 호출 불가능 (오류)
+>
+>#### getter 메소드와 setter 메소드
+>
+>> - 변수에 접근할 수 있는 메소드를 별도로 생성
+>> - `getter`: 변수의 값을 읽는 메소드
+>>   - `@property` 데코레이터 사용
+>> - `setter`: 변수의 값을 설정하는 메소드
+>>   - `@변수.setter`데코레이터 사용
+>>
+>> ```python
+>> class MyClass:
+>>     def __init__(self, name):
+>>         self.__name = name
+>>      
+>>     @property
+>>     def name(self):
+>>         return self.__name
+>>     
+>>     @name.property
+>>     def name(self, new_name):
+>>         self.__name = new_name
+>> 
+>> a = MyClass('Kim')
+>> print(a.name)	#=> 'Kim'
+>> a.name = 'Lee'	 
+>> print(a.name)	#=> 'Lee'
+>> # a.name()이 아니라 a.name으로 사용
+>> ```
 
 ---
 

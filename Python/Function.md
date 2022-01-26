@@ -25,20 +25,19 @@
 
 ### 함수의 정의
 
-> - 함수(Function) 
+> #### 함수(Function) 
 >
->   > - 특정 기능을 하는 코드 조각, 코드 묶음
->   > - 특정 명령을 수행하는 코드를 필요시 호출하여 간편히 사용
->   > - 매번 다시 작성하는 번거로움 제거
+> > - 특정 기능을 하는 코드 조각, 코드 묶음
+> > - 특정 명령을 수행하는 코드를 필요시 호출하여 간편히 사용
+> > - 매번 다시 작성하는 번거로움 제거
 >
-> - 사용자 함수(Custom Function)
+> #### 사용자 함수(Custom Function)
 >
->   ```python
->   def function_name(parameter):
->       # code block
->       return returning_value
->   ```
->
+> > ```python
+> > def function_name(parameter):
+> >     # code block
+> >     return returning_value
+> > ```
 
 <br>
 
@@ -57,13 +56,19 @@
 
 ### 값에 따른 함수의 종류
 
-> - void function
->   - return 값이 없는 경우
->   - None 반환
-> - Value returning function
->   - return 값이 있는 경우
->   - return 뒤에 값이 여러 개일 경우 튜플로 묶어서 반환
-> - return 을 통해 함수를 빠져나갈 수 있다.
+> #### void function
+>
+> > - return 값이 없는 경우
+> > - None 반환
+>
+> #### Value returning function
+>
+> > - return 값이 있는 경우
+> > - return 뒤에 값이 여러 개일 경우 튜플로 묶어서 반환
+>
+> <br>
+>
+> 위의 둘 모두 return 을 통해 함수를 빠져나갈 수 있다.
 
 ---
 
@@ -194,21 +199,22 @@
 >
 >   그 외 공간은 **global scope**
 >
-> - scope
 >
->   > - global scope: 코드 어디서든 참조 가능
->   > - local scope: 함수 내부에서만 참조 가능
+> #### scope
 >
-> - variable
+> > - global scope: 코드 어디서든 참조 가능
+> > - local scope: 함수 내부에서만 참조 가능
 >
->   > - built-in scope variable
->   >   - 파이썬이 실행된 이후부터 영원히 유지
->   > - global variable
->   >   - global scope에 정의된 변수
->   >   - 모듈이 호출된 시점 이후, 혹은 인터프리터가 끝날 때까지 유지
->   > - local variable
->   >   - local scope에 정의된 변수
->   >   - 함수가 호출될 때 생성, 함수가 종료될 때까지 유지
+> #### variable
+>
+> > - built-in scope variable
+> >   - 파이썬이 실행된 이후부터 영원히 유지
+> > - global variable
+> >   - global scope에 정의된 변수
+> >   - 모듈이 호출된 시점 이후, 혹은 인터프리터가 끝날 때까지 유지
+> > - local variable
+> >   - local scope에 정의된 변수
+> >   - 함수가 호출될 때 생성, 함수가 종료될 때까지 유지
 
 <br>
 
@@ -216,15 +222,16 @@
 
 > - 파이썬 식별자 이름은 namespace에 저장된다.
 >
-> - LEGB Rule - 아래 순서로 이름을 찾아나간다.
 >
->   > **L**ocal scope : 함수
->   >
->   > **E**nclosed scope: 특정 함수의 상위 함수
->   >
->   > **G**lobal scope: 함수 밖의 변수, Import 모듈
->   >
->   > **B**uilt-in scope: 파이썬 안에 내장된 함수 또는 속성
+> #### LEGB Rule
+>
+> > **L**ocal scope : 함수
+> >
+> > **E**nclosed scope: 특정 함수의 상위 함수
+> >
+> > **G**lobal scope: 함수 밖의 변수, Import 모듈
+> >
+> > **B**uilt-in scope: 파이썬 안에 내장된 함수 또는 속성
 >
 > - 함수 내에서는 바깥 Scope의 변수에 **접근 가능**, **수정 불가**
 
