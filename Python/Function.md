@@ -1,7 +1,7 @@
 # 함수
 
-- Abstraction : 복잡한 내용을 모르더라도(블랙박스) 사용가능하도록 하는 것
-- 재사용성 / 가독성 / 생산성
+> - Abstraction : 복잡한 내용을 모르더라도(블랙박스) 사용가능하도록 하는 것
+> - 재사용성 / 가독성 / 생산성
 
 [함수 기초](#함수-기초)
 
@@ -15,32 +15,36 @@
 
 [함수 응용](#함수-응용)
 
+<br>
 
+<br>
 
 ## 함수 기초
 
 ### 함수의 정의
 
-- 함수(Function) 
+> - 함수(Function) 
+>
+>   > - 특정 기능을 하는 코드 조각, 코드 묶음
+>   > - 특정 명령을 수행하는 코드를 필요시 호출하여 간편히 사용
+>   > - 매번 다시 작성하는 번거로움 제거
+>
+> - 사용자 함수(Custom Function)
+>
+>   ```python
+>   def function_name(parameter):
+>       # code block
+>       return returning_value
+>   ```
+>
+> ### 선언과 호출(define & call)
+>
+> - 선언: `def` 키워드
+> - 호출: `함수명()`
 
-  > - 특정 기능을 하는 코드 조각, 코드 묶음
-  > - 특정 명령을 수행하는 코드를 필요시 호출하여 간편히 사용
-  > - 매번 다시 작성하는 번거로움 제거
+<br>
 
-- 사용자 함수(Custom Function)
-
-  ```python
-  def function_name(parameter):
-      # code block
-      return returning_value
-  ```
-
-### 선언과 호출(define & call)
-
-- 선언: `def` 키워드
-- 호출: `함수명()`
-
-
+<br>
 
 ## 함수의 결과값(Output)
 
@@ -54,7 +58,7 @@
 >   - return 뒤에 값이 여러 개일 경우 튜플로 묶어서 반환
 > - return 을 통해 함수를 빠져나갈 수 있다.
 
-
+<br><br>
 
 ## 함수의 입력(Input)
 
@@ -63,87 +67,93 @@
 > - Parameter: 함수를 선언하고 실행할 때, 함수 내부에서 사용되는 식별자
 > - Argument: 함수를 호출 할 때 넣어주는 값
 
+<br>
+
 ### Argument
 
 > - func_name(argument)
 > - 함수를 호출하면 parameter를 통해 전달되는 값
 >   - 필수 Argument: 반드시 전달되어야 함
 >   - 선택 Argument: 값을 전달하지 않아도 되는 경우. 기본값이 전달된다.
+>
+> #### Positional Argument
+>
+> > ```python
+> > def func(x, y):
+> >     return x - y
+> > 
+> > print(func(1, 2))	# -1
+> > print(func(2, 1))	# 1
+> > ```
+>
+> #### Keyword Argument
+>
+> > - parameter = value 형태로 argument를 넣는다.
+> > - 선언할 때 사용한 parameter명을 쓰지 않으면 오류가 난다.
+> >
+> > ```python
+> > def func(x, y):
+> >     return x + y
+> > 
+> > print(func(1, 2))
+> > print(func(y=2, x=1))
+> > print(func(x=1, 2))
+> > print(func(1, y=2))
+> > 
+> > # Error! 키워드를 쓰면 위치를 조심해야 한다.
+> > # 아래의 코드는 작동하지 않음
+> > print(func(1, x=2))		
+> > ```
+>
+> #### Default Arguments Values
+>
+> > ```python
+> > def func(x, y=0):
+> >     return x + y
+> > 
+> > print(func(2)) 	# y는 입력을 하지 않아도 0이 들어감
+> > ```
 
-#### Positional Argument
-
-```python
-def func(x, y):
-    return x - y
-
-print(func(1, 2))	# -1
-print(func(2, 1))	# 1
-```
-
-#### Keyword Argument
-
-> - parameter = value 형태로 argument를 넣는다.
-> - 선언할 때 사용한 parameter명을 쓰지 않으면 오류가 난다.
-
-```python
-def func(x, y):
-    return x + y
-
-print(func(1, 2))
-print(func(y=2, x=1))
-print(func(x=1, 2))
-print(func(1, y=2))
-
-# Error! 키워드를 쓰면 위치를 조심해야 한다.
-# 아래의 코드는 작동하지 않음
-print(func(1, x=2))		
-```
-
-#### Default Arguments Values
-
-```python
-def func(x, y=0):
-    return x + y
-
-print(func(2)) 	# y는 입력을 하지 않아도 0이 들어감
-```
+<br>
 
 ### 정해지지 않은 여러 개의 Arguments
 
-#### Positional Arguments Packing/Unpacking
+> #### Positional Arguments Packing/Unpacking
+>
+> > ```python
+> > def func(*x):
+> >     return sum(x)
+> > 
+> > print(func(1, 2, 3))
+> > ```
+> >
+>
+> #### Keyword Arguments Packing/Unpacking
+>
+> > ```python
+> > def func(**x):
+> >     print(x)
+> >         
+> > func(a='one', b='two', c='three')
+> > # 딕셔너리로 묶여 처리된다.
+> > # {'a':'one', 'b':'two', 'c':'three'}
+> > 
+> > # 다음 아래의 코드들은 오류가 난다.
+> > # func() 안에 들어갈 것들은 def func() 안에 키워드로 선언하는 것과 같기 때문.
+> > func('a'='one', 'b'='two', 'c'='three')        
+> > func(1='one', 2='two', 3='three')
+> > ```
+> >
+>
+> #### 주의사항
+>
+> > - 기본값을 지닌 argument다음에 기본값이 없는 argument 순서가 올 수 없음
+> >
+> > ```python
+> > def func(x=0, y): 	# SyntaxError
+> > ```
 
-```python
-def func(*x):
-    return sum(x)
-
-print(func(1, 2, 3))
-```
-
-#### Keyword Arguments Packing/Unpacking
-
-```python
-def func(**x):
-    print(x)
-        
-func(a='one', b='two', c='three')
-# 딕셔너리로 묶여 처리된다.
-# {'a':'one', 'b':'two', 'c':'three'}
-
-# 다음 아래의 코드들은 오류가 난다.
-# func() 안에 들어갈 것들은 def func() 안에 키워드로 선언하는 것과 같기 때문.
-func('a'='one', 'b'='two', 'c'='three')        
-func(1='one', 2='two', 3='three')
-```
-
-#### 주의사항
-
-- 기본값을 지닌 argument다음에 기본값이 없는 argument 순서가 올 수 없음
-
-```python
-def func(x=0, y): 	# SyntaxError
-```
-
-
+<br><br>
 
 ## 함수의 범위(Scope)
 
@@ -169,7 +179,7 @@ def func(x=0, y): 	# SyntaxError
 >   >   - local scope에 정의된 변수
 >   >   - 함수가 호출될 때 생성, 함수가 종료될 때까지 유지
 
-
+<br>
 
 ### 이름 검색 규칙(Name Resolution)
 
@@ -187,23 +197,28 @@ def func(x=0, y): 	# SyntaxError
 >
 > - 함수 내에서는 바깥 Scope의 변수에 **접근 가능**, **수정 불가**
 
+<br>
+
 ### global문
 
 > - 현재 코드 블록 전체에 적용
 > - 함수 내부에서 외부 변수를 수정시킬 수 있다.
 > - global은 코드 최상단에 위치시키며, global 앞에 같은 변수 이름을 사용하지 않는다.
 > - global에 나열된 이름은 parameter, for 루프 대상, 클래스/함수 정의 등에 사용하지 않는다.
+>
+> ```python
+> a = 1
+> def func():
+>     a = 3		# global 앞에 위치하면 안됨
+>     global a
+> 
+> a = 1
+> def func(a):	# global이 parameter나 함수 정의에 사용되면 안됨
+>     global a
+> ```
+>
 
-```python
-a = 1
-def func():
-    a = 3		# global 앞에 위치하면 안됨
-    global a
-
-a = 1
-def func(a):	# global이 parameter나 함수 정의에 사용되면 안됨
-    global a
-```
+<br>
 
 ### nonlocal
 
@@ -211,6 +226,8 @@ def func(a):	# global이 parameter나 함수 정의에 사용되면 안됨
 > - nonlocal은 코드 최상단에 위치시키며, nonlocal 앞에 같은 변수 이름을 사용하지 않는다.
 > - nonlocal은 parameter, for 루프 대상, 클래스/함수 정의 등에 사용하지 않는다.
 > - global과는 다르게 이미 있는 이름과의 연결만 가능
+
+<br>
 
 ### 범위 확인하기
 
@@ -220,13 +237,15 @@ def func(a):	# global이 parameter나 함수 정의에 사용되면 안됨
 > - `locals()`: local namespace를 정리
 > - `globals()`: global, local, builtin 정보 모두 딕셔너리로 정리
 
-
+<br><br>
 
 ## 함수의 문서화(Doc-string)
 
 ### Docstring (Document String)
 
-- 함수나 클래스의 설명
+> - 함수나 클래스의 설명
+
+<br>
 
 ### Naming Convention
 
@@ -244,7 +263,7 @@ def func(a):	# global이 parameter나 함수 정의에 사용되면 안됨
 >
 > - 가급적 약어 사용 지양
 
-
+<br><br>
 
 ## 함수 응용
 
@@ -252,31 +271,40 @@ def func(a):	# global이 parameter나 함수 정의에 사용되면 안됨
 
 > - `map(function, iterable)`
 > - iterable 데이터의 모든 요소에 function을 적용하고 그 결과를 **map object**로 반환
+>
+> ```python
+> n, m = map(int, input().split())
+> ```
+>
 
-```python
-n, m = map(int, input().split())
-```
+<br>
 
 ### filter
 
 > - `filter(function, iterable)`
 > - iterable 데이터의 모든 요소에 function을 적용해 그 결과가 True인 것들을 **filter object**로 반환
+>
+> ```python
+> data_even = list(filter(lambda x: x%2 == 0, data))
+> ```
+>
 
-```python
-data_even = list(filter(lambda x: x%2 == 0, data))
-```
+<br>
 
 ### zip
 
 > - `zip(*iterable)`
 > - 복수의 iterable을 모아 **튜플**을 원소로 하는 **zip object** 반환
+>
+> ```python
+> data1 = ['a', 'b']
+> data2 = [1, 2]
+> data3 = list(zip(data1, data2))
+> # data3 = [('a', 1), ('b', 2)]
+> ```
+>
 
-```python
-data1 = ['a', 'b']
-data2 = [1, 2]
-data3 = list(zip(data1, data2))
-# data3 = [('a', 1), ('b', 2)]
-```
+<br>
 
 ### lambda 함수
 
@@ -286,6 +314,8 @@ data3 = list(zip(data1, data2))
 > - 간편 조건문 외 조건문이나 반복문을 가질 수 없다.
 > - return문을 가질 수 없다.
 
+<br>
+
 ### 재귀 함수(recursive function)
 
 > - 자기 자신을 호출하는 함수
@@ -294,19 +324,20 @@ data3 = list(zip(data1, data2))
 > - 파이썬에서 최대 재귀 깊이(maximum recursion depth)는 **1,000번**.
 > - 1,000번을 넘어가면 Recursion Error 발생
 > - 보통은 반복문이 더 빠르다.
+>
+> ```python
+> # 팩토리얼 예시
+> def factorial(n):
+>     # 초기값
+>     if n == 0 or n == 1:
+>         return 1
+>     else:
+>         # 점화식
+>         return n * factorial(n-1)
+> ```
+>
 
-```python
-# 팩토리얼 예시
-def factorial(n):
-    # 초기값
-    if n == 0 or n == 1:
-        return 1
-    else:
-        # 점화식
-        return n * factorial(n-1)
-```
-
-
+<br>
 
 #### 1급 객체
 

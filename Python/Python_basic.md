@@ -16,9 +16,7 @@
 
 [연산자(Operator)](#연산자operator)
 
-
-
-
+<br><br>
 
 ## 기초 문법
 
@@ -28,7 +26,7 @@
 >
 >   ex) '', "" 를 혼용하지 않는다, 띄어쓰기, 여백
 
-
+<br>
 
 ### 들여쓰기(Identation)
 
@@ -36,7 +34,7 @@
 > - 띄어쓰기와 Tab은 혼용 금지
 > - 되도록 **띄어쓰기** 사용
 
-
+<br>
 
 ### 변수(Variable)
 
@@ -52,67 +50,68 @@
 > type() 		# 값의 타입
 > id()		# 메모리 주소
 > ```
-
-#### 변수 연산
-
-```python
-a = 1
-b = 2
-c = '파이썬'
-
-
-a + b 			# 숫자 + 숫자
-'Hello' + c		# 문자 + 문자
-c = c * 3		# 문자 * 숫자 (문자 반복)
-```
-
-#### 변수 할당
-
-```python
-a = b = 1		# 같은 값 할당 가능 (a, b = 1 은 오류남)
-a, b = 1, 2		# 다른 값 동시 할당 가능
-a, b = b, a		# 값 바꾸기 (기본은 임시 변수 tmp 활용)
-```
-
-#### 식별자(Identifiers)
-
-> - 영문 알파벳, 언더스코어`_`, 숫자로 구성
 >
-> - 첫 글자 숫자 금지
+> #### 변수 연산
 >
-> - 길이 제한 X
+> > ```python
+> > a = 1
+> > b = 2
+> > c = '파이썬'
+> > 
+> > 
+> > a + b 			# 숫자 + 숫자
+> > 'Hello' + c		# 문자 + 문자
+> > c = c * 3		# 문자 * 숫자 (문자 반복)
+> > ```
+> >
 >
-> - 대소문자 구별
+> #### 변수 할당
 >
-> - 금지어
+> > ```python
+> > a = b = 1		# 같은 값 할당 가능 (a, b = 1 은 오류남)
+> > a, b = 1, 2		# 다른 값 동시 할당 가능
+> > a, b = b, a		# 값 바꾸기 (기본은 임시 변수 tmp 활용)
+> > ```
+> >
 >
->   ```python
->   import keword
->   print(keyword.kwlist)
->   
->   [False, None, True, and, as, assert, async, await, break, class, continue, def, del, elif, else, except, finaaly, for, from, global, if, import, in, is, lambda, nonlocal, not, or, pass, raise, return, try, while, with, yield]
->   ```
+> #### 식별자(Identifiers)
 >
+> > - 영문 알파벳, 언더스코어`_`, 숫자로 구성
+> > - 첫 글자 숫자 금지
+> > - 길이 제한 X
+> > - 대소문자 구별
+> > - 금지어
+> >
+> > ```python
+> > import keword
+> > print(keyword.kwlist)
+> > 
+> > [False, None, True, and, as, assert, async, await, break, class, continue, def, del, elif, else, except, finaaly, for, from, global, if, import, in, is, lambda, nonlocal, not, or, pass, raise, return, try, while, with, yield]
+> > ```
+>
+> #### 사용자 입력
+>
+> > ```python
+> > name = input('블라블라')
+> > ```
+> >
+> > 반환값은 항상 `str`
+>
+> #### 주석 (Comment)
+>
+> >```python
+> ># : 한줄주석
+> >"""
+> >여러줄
+> >주석
+> >"""
+> >```
+> >
+> >VS Code 등에서는 `ctrl + /`으로 여러줄 주석 가능
 
-#### 사용자 입력
+<br>
 
-```python
-name = input('블라블라')
-```
-
-> 반환값은 항상 `str`
-
-#### 주석 (Comment)
-
-```python
-# : 한줄주석
-"""
-여러줄
-주석
-"""
-```
-
-> VS Code 등에서는 `ctrl + /`으로 여러줄 주석 가능
+<br>
 
 ---
 
@@ -142,124 +141,130 @@ name = input('블라블라')
 >
 > - String Type
 
-
+<br>
 
 ### None
 
-> 값이 없음을 표현
+> - 값이 없음을 표현
+>
+> ```python
+> type(None) # << NoneType
+> ```
+>
 
-```python
-type(None) # << NoneType
-```
-
-
+<br>
 
 ### 불린(Boolean)
 
-> 0, 공백 외에는 True
+> - 0, 공백 외에는 True
+>
+> ```python
+> bool()		# True / False 검증
+> 
+> bool(-1)	# True
+> bool([0])	# True
+> bool('')	# False (공백 하나가 있으면 True)
+> bool([])	# False
+> ```
+>
 
-```python
-bool()		# True / False 검증
-
-bool(-1)	# True
-bool([0])	# True
-bool('')	# False (공백 하나가 있으면 True)
-bool([])	# False
-```
-
-
+<br>
 
 ### 정수(Int)
 
-> Python의 경우 오버플로우가 없다 (long 타입 없음)
+> - Python의 경우 오버플로우가 없다 (long 타입 없음)
+>
+> ```python
+> 0b10		# 2진수(binary) 	
+> 0o10		# 8진수(Octal)	
+> 0x10		# 16진수(Hexadecimal)
+> ```
+>
 
-```python
-0b10		# 2진수(binary) 	
-0o10		# 8진수(Octal)	
-0x10		# 16진수(Hexadecimal)
-```
-
-
+<br>
 
 ### 실수(Float)
 
-> Floating point rounding error
+> - Floating point rounding error
+>
+> ```python
+> 3.14 - 3.02 == 0.12		# False !!!
+> # 3.14 - 3.02 = 0.1200000000001
+> 
+> 
+> # 실수 연산 확인법
+> abs(x - y) <= 1e-10		# 절댓값 오차가 적은가?
+> 
+> import sys
+> sys.float_info.epsilon	# = 2.220446049250313E-16
+> 
+> import math				# epsilon은 False가 날 때가 있어서 inclose 추천
+> math.isclose(x, y)
+> ```
+>
 
-```python
-3.14 - 3.02 == 0.12		# False !!!
-# 3.14 - 3.02 = 0.1200000000001
-
-
-# 실수 연산 확인법
-abs(x - y) <= 1e-10		# 절댓값 오차가 적은가?
-
-import sys
-sys.float_info.epsilon	# = 2.220446049250313E-16
-
-import math				# epsilon은 False가 날 때가 있어서 inclose 추천
-math.isclose(x, y)
-```
-
-
+<br>
 
 ### 복소수(Complex)
 
-```python
-a = 1 + 2j
-a.real	# 1.0
-a.imag	# 2.0
-```
+> ```python
+> a = 1 + 2j
+> a.real	# 1.0
+> a.imag	# 2.0
+> ```
+>
 
-
+<br>
 
 ### 문자열(String Type)
 
-> Immutable (불변)
-
-```python
-a = 'Hello'
-a[1] = 'i'		# Error! 문자열 중간을 바꿀 수 없음
-```
-
-> Iterable ( 순회가능한 )
-
-```python
-a = '123'
-for char in a:	# 문자 하나씩 접근은 가능
-```
-
-> `''' '''`, `""" """` 3중 따옴표 : 따옴표 안에 따옴표 가능
-
-##### Escape sequence
-
-```python
-\n	# 줄바꿈
-\t	# 탭
-\r	# 캐리지 리턴
-\0	# Null
-\\	# \
-\'	# '
-\"	# "
-```
-
-##### String Interpolation
-
-```python
-print('Hello, %s' % x) 		# %s 문자, %d 정수, %f 실수
-print('Hello, {}, {}'.format(x, y))
-print(f'Hello, {x}, {y})	# Python 3.6+
-      						# {x:.3f} 소수점표기
-      						# {x * 2} 연산 가능
-      						# {x:0>10.2f} --> 10자리 표기, 소수점은 2째자리까지
-      						# 0으로 나머지를 채운다. >는 우측정렬 ^는 가운데정렬
-```
+> - Immutable (불변)
+>
+> ```python
+> a = 'Hello'
+> a[1] = 'i'		# Error! 문자열 중간을 바꿀 수 없음
+> ```
+>
+> - Iterable ( 순회가능한 )
+>
+> ```python
+> a = '123'
+> for char in a:	# 문자 하나씩 접근은 가능
+> ```
+>
+> - `''' '''`, `""" """` 3중 따옴표 : 따옴표 안에 따옴표 가능
+>
+> ##### Escape sequence
+>
+> ```python
+> \n	# 줄바꿈
+> \t	# 탭
+> \r	# 캐리지 리턴
+> \0	# Null
+> \\	# \
+> \'	# '
+> \"	# "
+> ```
+>
+> ##### String Interpolation
+>
+> ```python
+> print('Hello, %s' % x) 		# %s 문자, %d 정수, %f 실수
+> print('Hello, {}, {}'.format(x, y))
+> print(f'Hello, {x}, {y})	# Python 3.6+
+>       						# {x:.3f} 소수점표기
+>       						# {x * 2} 연산 가능
+>       						# {x:0>10.2f} --> 10자리 표기, 소수점은 2째자리까지
+>       						# 0으로 나머지를 채운다. >는 우측정렬 ^는 가운데정렬
+> ```
+>
 
 ---
 
+<br><br>
+
 ## 컨테이너(Container)
 
-> 컨테이너
->
 > - 시퀀스형
 >
 >   > - 리스트
@@ -285,70 +290,72 @@ print(f'Hello, {x}, {y})	# Python 3.6+
 
 [형 변환(Typecasting)](#형-변환typecasting)
 
-
+<br>
 
 ### 리스트(List)
 
 > - 순서를 가짐
->
 > - 가변 자료형
+>
+> ```python
+> # 초기화 선언
+> a = []
+> a = list()
+> 
+> b = a[i]	# []로 인덱스
+> 			# 시작은 0, 맨 끝부터는 -1에서 시작
+> c = a[][]	# 다차원
+> ```
+>
 
-```python
-# 초기화 선언
-a = []
-a = list()
-
-b = a[i]	# []로 인덱스
-			# 시작은 0, 맨 끝부터는 -1에서 시작
-c = a[][]	# 다차원
-```
-
-
+<br>
 
 ### 튜플(Tuple)
 
 > - 순서를 가짐
->
 > - 불변 자료형
+>
+> ```python
+> # 초기화 선언
+> a = ()
+> a = tuple()
+> 
+> b = a[i]	# 수정은 안되지만 접근은 가능
+> c = 1,		# 단일 항목에는 쉼표가 붙어야 tuple
+> d = 1, 2, 3	# 복수 항목은 마지막 쉼표 불필요
+> ```
+>
 
-```python
-# 초기화 선언
-a = ()
-a = tuple()
-
-b = a[i]	# 수정은 안되지만 접근은 가능
-c = 1,		# 단일 항목에는 쉼표가 붙어야 tuple
-d = 1, 2, 3	# 복수 항목은 마지막 쉼표 불필요
-```
-
-
+<br>
 
 ### 레인지(Range)
 
-> 숫자 시퀀스
+> - 숫자 시퀀스
+>
+> ```python
+> range(n)		# 0부터 n-1
+> range(n, m)		# n부터 m-1
+> range(n, m, s)	# n부터 m-1까지 s만큼 증가
+> 				# s에 음수로 n부터 m-1까지 감소 가능
+> ```
+>
 
-```python
-range(n)		# 0부터 n-1
-range(n, m)		# n부터 m-1
-range(n, m, s)	# n부터 m-1까지 s만큼 증가
-				# s에 음수로 n부터 m-1까지 감소 가능
-```
-
-
+<br>
 
 ### 패킹/언패킹(Packing/Unpacking)
 
-```python
-x, *y = 1, 2, 3, 4
-# x = 1
-# y = [2, 3, 4]
-# 리스트로 패킹
+> ```python
+> x, *y = 1, 2, 3, 4
+> # x = 1
+> # y = [2, 3, 4]
+> # 리스트로 패킹
+> 
+> def function(*x)
+> # 튜플로 언패킹
+> ```
+>
 
-def function(*x)
-# 튜플로 언패킹
-```
-
-
+<br>
 
 ### 셋(Set)
 
@@ -356,16 +363,17 @@ def function(*x)
 > - 가변 자료형
 > - 중복 불가
 > - 순서가 없어 인덱싱 불가
+>
+> ```python
+> # 초기화 선언
+> a = set()
+> 
+> # 아래는 Dictionary # 빈 set은 무조건 set()
+> a = {} 		
+> ```
+>
 
-```python
-# 초기화 선언
-a = set()
-
-# 아래는 Dictionary # 빈 set은 무조건 set()
-a = {} 		
-```
-
-
+<br>
 
 ### 딕셔너리(Dictionary)
 
@@ -378,42 +386,43 @@ a = {}
 >     > string, interger, float, boolean, tuple, range
 >
 >   - value: 형태 상관X
+>
+> ```python
+> # 초기화 선언
+> a = {}
+> a = dict()
+> 
+> 
+> a = { 'x': 1, 'y': 'k', 75: [1, 2, 3]}
+> ```
+>
 
-```python
-# 초기화 선언
-a = {}
-a = dict()
-
-
-a = { 'x': 1, 'y': 'k', 75: [1, 2, 3]}
-```
-
-
+<br><br>
 
 ## 형 변환(Typecasting)
 
-- 암시적 형 변환(Implicit) : 사용자 의도하지 않고, 파이썬 내부적으로 자료형 변환
-
-  > - `True` = 1
-  > - `int` + `float` = `float`
-  > - `int` + `complex`  =  `complex`
-  > - `float` + `complex` = `complex`
-
-- 명시적 형 변환(Explicit) : 사용자가 의도적으로 변환
-  
-  > - int
-  >
-  >   > str*(정수로 적힌 문자열만), float
-  >
-  > - float
-  >
-  >   > str*(실수로 적힌 문자열만), int
-  >   >
-  >   > float(3) = 3.0
-  >
-  > - str
-  >
-  >   > int, float, list, tuple, dict
+> - 암시적 형 변환(Implicit) : 사용자 의도하지 않고, 파이썬 내부적으로 자료형 변환
+>
+>   > - `True` = 1
+>   > - `int` + `float` = `float`
+>   > - `int` + `complex`  =  `complex`
+>   > - `float` + `complex` = `complex`
+>
+> - 명시적 형 변환(Explicit) : 사용자가 의도적으로 변환
+>
+>   > - int
+>   >
+>   >   > str*(정수로 적힌 문자열만), float
+>   >
+>   > - float
+>   >
+>   >   > str*(실수로 적힌 문자열만), int
+>   >   >
+>   >   > float(3) = 3.0
+>   >
+>   > - str
+>   >
+>   >   > int, float, list, tuple, dict
 
 |                | string | list           | tuple          | range | set            | dictionary |
 | -------------- | ------ | -------------- | -------------- | ----- | -------------- | ---------- |
@@ -424,24 +433,23 @@ a = { 'x': 1, 'y': 'k', 75: [1, 2, 3]}
 | **set**        | o      | o              | o              | x     | -              | x          |
 | **dictionary** | o      | o<br />(key만) | o<br />(key만) | x     | o<br />(key만) | -          |
 
+<br>
+
 #### 기타
 
 > trailing comma: 리스트나 딕셔너리 등의 요소를 엔터로 구분하며 입력할 때 끝에 `,`를 붙인다.
+>
+> ```python
+> a = {
+>     0 : 1,
+>     1 : 2,
+>     2 : 3,  # trailing comma를 넣어준다.   
+> }
+> 
+> ```
+>
 
-```python
-a = {
-    0 : 1,
-    1 : 2,
-    2 : 3,  # trailing comma를 넣어준다.   
-}
-
-```
-
-
-
-
-
-
+<br><br>
 
 ---
 
@@ -454,7 +462,7 @@ a = {
 > - `%` : 나머지
 > - `**`: 거듭제곱
 
-
+<br>
 
 ### 비교 연산자(Comparison Operator)
 
@@ -463,7 +471,7 @@ a = {
 > - `is` `is not`
 >
 
-
+<br>
 
 ### 논리 연산자(Logical Operator)
 
@@ -476,26 +484,30 @@ a = {
 >   - 첫번째 값이 True --> 첫번째 값 반환
 >   - 첫번째 값이 False --> 두번째 값 반환
 
+<br>
+
 ### 멤버십 연산자(Membership Operator)
 
 > - `in`
 > -  `not in`
 
+<br>
+
 ### 시퀀스형 연산자(Sequence Type Operator)
 
 > - `+`: list, tuple, 문자열 접합
->
-> - `*`: list, tuple, 문자열 반복
->
->   ```python
->   [a, b, c, d][0:3]	# 0~2
->   [a, b, c, d][:3]	# 0~2
->   [a, b, c, d][2:]	# 2~3
->   [a, b, c, d, e][0:5:2] # 0, 2, 4
->   [::]	# 전체
->   [::-1]	# 전체 거꾸로
->   ```
->
+>- `*`: list, tuple, 문자열 반복
+> 
+>```python
+> [a, b, c, d][0:3]	# 0~2
+> [a, b, c, d][:3]	# 0~2
+> [a, b, c, d][2:]	# 2~3
+> [a, b, c, d, e][0:5:2] # 0, 2, 4
+> [::]	# 전체
+> [::-1]	# 전체 거꾸로
+> ```
+
+<br>
 
 ### set 연산자
 
@@ -503,6 +515,8 @@ a = {
 > - `&`:  교집합
 > - `-`: 여집합
 > - `^`: 대칭차
+
+<br>
 
 ### 연산자 우선순위
 
@@ -518,9 +532,7 @@ a = {
 > 10. `and`
 > 11. `or`
 
-
-
-
+<br><br>
 
 ## 프로그램 구성 단위
 
