@@ -14,11 +14,14 @@
 
 ### 모듈과 패키지
 
-- 모듈
-  - 특정 기능을 하는 코드를 파이썬 파일(.py) 단위로 작성한 것
-- 패키지
-  - 특정 기능과 관련된 여러 모듈의 집합
-  - 패키지 안에 또 다른 서브 패키지를 포함
+> - 모듈
+>
+>   > 특정 기능을 하는 코드를 파이썬 파일(.py) 단위로 작성한 것
+>
+> - 패키지
+>
+>   > - 특정 기능과 관련된 여러 모듈의 집합
+>   > - 패키지 안에 또 다른 서브 패키지를 포함
 
 ### 모듈과 패키지 불러오기
 
@@ -46,7 +49,7 @@ from package.module import var, function, Class
 
 ### 파이썬 패키지 관리자(pip)
 
-- PyPI(Python Package Index)에 저장된 외부 패키지 설치를 돕는 패키지 관리 시스템
+> PyPI(Python Package Index)에 저장된 외부 패키지 설치를 돕는 패키지 관리 시스템
 
 ```bash
 # 패키지 설치
@@ -75,12 +78,12 @@ $ pip install -r requirement.txt
 
 ### 가상환경
 
-- 복수의 프로젝트 중에 패키지들의 여러 버전을 프로젝트별로 관리할 수 있도록 함
+> 복수의 프로젝트 중에 패키지들의 여러 버전을 프로젝트별로 관리할 수 있도록 함
 
 ### venv
 
-- 가상 환경을 만들고 관리하는데 사용되는 모듈(Python 3.5+)
-- 특정 폴더에 가상 환경을 만들고 패키지를 저장, 관리
+> - 가상 환경을 만들고 관리하는데 사용되는 모듈(Python 3.5+)
+> - 특정 폴더에 가상 환경을 만들고 패키지를 저장, 관리
 
 ```bash
 # 보통 폴더명은 venv로 한다.
@@ -99,28 +102,28 @@ $ source venv/Scripts/activate
 
 ### 모듈
 
-- `.py` 파일로 저장하고 같은 폴더 내에서 `import`로 불러와 사용한다.
+> `.py` 파일로 저장하고 같은 폴더 내에서 `import`로 불러와 사용한다.
 
 ### 패키지
 
-- 모듈의 상위 폴더가 패키지
+> - 모듈의 상위 폴더가 패키지
+>
+> - 각 폴더마다 `__init__.py`를 만들어 패키지로 인식시킨다. (파이썬 하위버전에서도 호환을 위함)
+>
+> - 실행 파일을 패키지 폴더 안에 두고 
 
-- 각 폴더마다 `__init__.py`를 만들어 패키지로 인식시킨다. (파이썬 하위버전에서도 호환을 위함)
+```python
+from package import module
+from package.module import var, function, Class
 
-- 실행 파일을 패키지 폴더 안에 두고 
+# 서로 다른 패키지의 이름이 같은 패키지 사용
+from package.subpackage_1 import module_a
+from package.subpackage_2 import module_a as module_b
 
-  ```python
-  from package import module
-  from package.module import var, function, Class
-  
-  # 서로 다른 패키지의 이름이 같은 패키지 사용
-  from package.subpackage_1 import module_a
-  from package.subpackage_2 import module_a as module_b
-  
-  # 상위 패키지나 다른 서브 패키지 사용
-  from ..up_package import module
-  from first_package.second_package.third_package import module
-  ```
-  
-  
+# 상위 패키지나 다른 서브 패키지 사용
+from ..up_package import module
+from first_package.second_package.third_package import module
+```
+
+
 

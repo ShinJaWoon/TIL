@@ -122,5 +122,3 @@ result = list(enumerate(data), start=1)
 - break로 중단되면 실행되지 않음
 
 
-
-## comprehension

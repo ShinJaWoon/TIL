@@ -10,40 +10,50 @@
 
 ## 디버깅
 
-- print문이나 breakpoint 활용
-- 누군가에게 설명하면서 정리해보는 것도 좋다
+> - print문이나 breakpoint 활용
+> - 누군가에게 설명하면서 정리해보는 것도 좋다
 
 ## 에러와 예외
 
 ### 문법 에러(Syntax Error)
 
-- Invalid syntax
-- assign to literal
-- EOL (End of Line)
-- EOF (End of File)
+> - Invalid syntax
+> - assign to literal
+> - EOL (End of Line)
+> - EOF (End of File)
 
 ### 예외(Exception)
 
-- 문장이나 표현식이 문법적으로 올바르더라도 발생하는 에러
-- 여러 타입으로 나뉜다.
-- 사용자 정의 예외를 만들어 관리할 수 있다.
+> - 문장이나 표현식이 문법적으로 올바르더라도 발생하는 에러
+> - 여러 타입으로 나뉜다.
+> - 사용자 정의 예외를 만들어 관리할 수 있다.
 
 ### 예외 종류
 
-- ZeroDivisionError: 0으로 나누고자 할 때 발생
-- NameError: namespace 상에 이름이 없는 경우
-- TypeError
-  - 타입 불일치
-  - argument 누락
-  - argument 개수 초과
-  - argument 타입 불일치\
-- ValueError: 타입은 올바르나 값이 적절하지 않은 경우
-- IndexError: 인덱스가 존재하지 않거나 범위를 벗어나는 경우
-- KeyError: 해당 키가 존재하지 않는 경우
-- ModuleNotFoundError: 존재하지 않는 모듈을 import하는 경우
-- ImportError: 모듈은 잇지만 존재하지 않는 클래스/함수를 가져오는 경우
-- KeyboardInterrupt: 임의로 프로그램을 종료하였을 때
-- IndentationError: Identation이 적절하지 않은 경우 (tab, 공백 구분)
+> - ZeroDivisionError: 0으로 나누고자 할 때 발생
+>
+> - NameError: namespace 상에 이름이 없는 경우
+>
+> - TypeError
+>
+>   > - 타입 불일치
+>   > - argument 누락
+>   > - argument 개수 초과
+>   > - argument 타입 불일치
+>
+> - ValueError: 타입은 올바르나 값이 적절하지 않은 경우
+>
+> - IndexError: 인덱스가 존재하지 않거나 범위를 벗어나는 경우
+>
+> - KeyError: 해당 키가 존재하지 않는 경우
+>
+> - ModuleNotFoundError: 존재하지 않는 모듈을 import하는 경우
+>
+> - ImportError: 모듈은 잇지만 존재하지 않는 클래스/함수를 가져오는 경우
+>
+> - KeyboardInterrupt: 임의로 프로그램을 종료하였을 때
+>
+> - IndentationError: Identation이 적절하지 않은 경우 (tab, 공백 구분)
 
 
 
@@ -51,13 +61,15 @@
 
 ### 예외 처리
 
-- try 문(statement) / except 절(clause)
-- try 문
-  - 오류가 발생할 가능성이 있는 코드 실행
-  - 예외가 발생하지 않으면, except 실행 없이 종료
-- except 절
-  - 예외 발생 시 except 절 실행
-  - 예외 상황을 처리하는 코드를 통해 적절한 조치
+> - try 문(statement) / except 절(clause)
+> - try 문
+>   - 오류가 발생할 가능성이 있는 코드 실행
+>   - 예외가 발생하지 않으면, except 실행 없이 종료
+> - except 절
+>   - 예외 발생 시 except 절 실행
+>   - 예외 상황을 처리하는 코드를 통해 적절한 조치
+
+
 
 ### 작성 방법
 
@@ -90,10 +102,10 @@ raise ValueError('값 에러 발생')
 
 ### assert
 
-- 예외를 강제로 발생
-- 무조건 AssertionError가 발생
-- 디버깅 용도로 사용
-- 특정 조건이 거짓이면 발생
+> - 예외를 강제로 발생
+> - 무조건 AssertionError가 발생
+> - 디버깅 용도로 사용
+> - 특정 조건이 거짓이면 발생
 
 ```python
 assert len([1, 2]) == 1, '길이가 1이 아닙니다.'
