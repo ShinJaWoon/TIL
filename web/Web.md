@@ -87,6 +87,7 @@
 > >   > - 문서 제목, 인코딩, 스타일, 외부 파일 로딩 등
 > >   > - 정보에 대한 내용이므로 일반적으로 브라우저에 표현되지 않음
 > > - body: 문서 본문 요소
+> >   
 > >   > - 실제 화면에 보이는 내용들
 > >
 > > ```html
@@ -102,7 +103,7 @@
 > >         # 보이지 않는 문서에 대한 정보
 > >         <meta charset="UTF-8">
 > >         <title>Document</title>
-> >     
+> > 
 > >     </haed>
 > >     <body>
 > >         # 실제로 보이는 영역
@@ -149,12 +150,13 @@
 > > - 태그 `<>` `</>`와 내용(contents)로 구성되어 있다.
 > > - 태그는 내용을 감싸며, 정보의 성격과 의미를 정의
 > > - 내용이 없는 태그들: 닫히는 태그가 없다.
-> >   - `br`, `hr`, `img`, `input`, `link`, `meta`
-> >
+> >   - `br`(개행), `hr`(수평선), `img`, `input`, `link`, `meta`
+> >   - `<hr/>` 처럼 표현하기도 함
+> >   
 > > - 요소는 중첩(nested)될 수 있음 (여러번 사용할 수 있음)
 > > - 태그 쌍이 제대로 되지 않아도 에러 없이 깨져서 출력됨
 >
-> #### 속성(attribute)
+>#### 속성(attribute)
 >
 > > - 열리는 태그 안에 속성을 작성
 > > - 이름과 값이 하나의 쌍으로 존재
@@ -331,6 +333,10 @@
 > [Selector 심화](#selector-심화)
 >
 > [CSS Box model](#css-box-model)
+>
+> [CSS Display](#css-display)
+>
+> [CSS Position](#css-position)
 
 
 
@@ -555,12 +561,12 @@
 >
 >#### box-sizing
 >
->> ```css
->> box-sizing: border-box;  /* 기본값은 content-box */
->> /* 테두리를 기준으로 바뀜 */
->> /* content-box의 경우 width 설정 시 content영역만 설정 */
->> /* border-box의 경우 width 값이 content + 2*padding + 2*border값으로 변환 */
->> ```
+> > ```css
+> > box-sizing: border-box;  /* 기본값은 content-box */
+> > /* 테두리를 기준으로 바뀜 */
+> > /* content-box의 경우 width 설정 시 content영역만 설정 */
+> > /* border-box의 경우 width 값이 content + 2*padding + 2*border값으로 변환 */
+> > ```
 
 
 
