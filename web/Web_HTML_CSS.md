@@ -509,64 +509,64 @@
 
 >#### CSS 원칙 1 - Normal Flow
 >
->- 모든 요소는 네모(박스모델)이고,
->- 위에서부터 아래로,
->- 왼쪽에서 오른쪽으로 쌓인다.
+> > - 모든 요소는 네모(박스모델)이고,
+> > - 위에서부터 아래로,
+> > - 왼쪽에서 오른쪽으로 쌓인다.
 >
->#### Box model
+> #### Box model
 >
->- 모든 HTML 요소는 bot 형태로 되어있음
->
->- 하나의 박스는 네 영역으로 이루어진다.
->
-> > - content: 실제로 값이 들어있는 영역
-> > - padding: 테두리 안 여백
-> > - border: 테두리
-> > - margin: 테두리 밖 여백, 배경색 지정 불가
->
->```css
->.margin {
->   margin-top: 10px;
->   margin-right: 20px;
->   margin-bottom: 30px;
->   margin-left: 40px;
->}
->.margin-1 {
->   margin: 10px /* 상하좌우 */
->}
->.margin-2 {
->   margin: 10px 20px /* 수직 수평 */
->}
->.margin-3 {
->   margin: 10px 20px 30px /* 상 중 하 */
->}
->.margin-4 {
->   margin: 10px 20px 30px 40px /* 상우하좌 시계방향 */
->}
->
->.margin-padding {
->   margin: 10px;
->   padding: 30px;
->}
->
->.border {
->   border-width: 3px;
->   border-style: dashed;
->   border-color: black;
->}
->.border {
->   border: 3px dashed black;
->}
->```
+> > - 모든 HTML 요소는 bot 형태로 되어있음
+> >
+> > - 하나의 박스는 네 영역으로 이루어진다.
+> >
+> >   > - content: 실제로 값이 들어있는 영역
+> >   > - padding: 테두리 안 여백
+> >   > - border: 테두리
+> >   > - margin: 테두리 밖 여백, 배경색 지정 불가
+> >
+> >  ```css
+> >  .margin {
+> >    margin-top: 10px;
+> >    margin-right: 20px;
+> >    margin-bottom: 30px;
+> >    margin-left: 40px;
+> >  }
+> >  .margin-1 {
+> >    margin: 10px /* 상하좌우 */
+> >  }
+> >  .margin-2 {
+> >    margin: 10px 20px /* 수직 수평 */
+> >  }
+> >  .margin-3 {
+> >    margin: 10px 20px 30px /* 상 중 하 */
+> >  }
+> >  .margin-4 {
+> >    margin: 10px 20px 30px 40px /* 상우하좌 시계방향 */
+> >  }
+> >  
+> >  .margin-padding {
+> >    margin: 10px;
+> >    padding: 30px;
+> >  }
+> >  
+> >  .border {
+> >    border-width: 3px;
+> >    border-style: dashed;
+> >    border-color: black;
+> >  }
+> >  .border {
+> >    border: 3px dashed black;
+> >  }
+> >  ```
 >
 >#### box-sizing
 >
-> > ```css
-> > box-sizing: border-box;  /* 기본값은 content-box */
-> > /* 테두리를 기준으로 바뀜 */
-> > /* content-box의 경우 width 설정 시 content영역만 설정 */
-> > /* border-box의 경우 width 값이 content + 2*padding + 2*border값으로 변환 */
-> > ```
+>> ```css
+>> box-sizing: border-box;  /* 기본값은 content-box */
+>> /* 테두리를 기준으로 바뀜 */
+>> /* content-box의 경우 width 설정 시 content영역만 설정 */
+>> /* border-box의 경우 width 값이 content + 2*padding + 2*border값으로 변환 */
+>> ```
 
 
 
