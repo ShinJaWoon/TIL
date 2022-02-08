@@ -15,6 +15,11 @@ colsapn: 열병합 속성
 ex) <td rowspan="2">내용</td>
 병합한 곳은 <td></td>를 적지 않는다.
 
+이미지가 너무 클 때
+.img-fluid
+
+카드 자체에 링크걸기
+<a href="#" class="stretched-link"></a>
 
 ```
 
@@ -40,6 +45,15 @@ line-height = 0;
 원으로 만들기
 border-radius: 50%
 조절하면 부드러운 사각형을 만든다.
+
+.classname:hover{
+    호버되었을때만 적용
+}
+
+
+폰트 적용법
+import url(폰트url)
+font-family: a, b, c
 
 
 

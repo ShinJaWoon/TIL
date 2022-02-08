@@ -576,38 +576,38 @@
 
 ### CSS Display
 
->#### CSS 원칙2
->
->- 1원칙: 모든 요소는 네모(박스모델)이고, 좌측 상단에 배치.
->- 2원칙: display에 따라 크기와 배치가 달라진다.
->
->#### display
->
->- display: block
->
->  > - 줄바꿈이 일어나는 요소
->  > - 화면 크기 전체의 가로 폭 차지
->  > - block 요소 안에 inline 요소가 들어갈 수 있다.
->  > - div / ul, ol, li, p, hr, form 등
->
->- display: inline
->
->  > - 줄 바꿈이 일어나지 않는 행의 일부 요소
->  > - 텍스트 관련 요소들
->  > - content 너비만큼 가로 폭을 차지
->  > - width, height, margin-top, margin-bottom을 지정할 수 없다.
->  > - 상하 여백은 line-height로 지정
->  > - span / a / img / input, label / b, em, i, strong 등
->
->- display: inline-block
->
->  > - block과 inline 레벨 요소 특징을 모두 가진다
->  > - inline 처럼 한 줄에 표시 가능, block 처럼 width, height, margin 속성 지정 가능
->
->- display: none
->
->  > - 해당 요소를 화면에 표시하지 않고, 공간도 부여하지 않음
->  > - visibility: hidden의 경우 표시는 하지 않지만 공간은 부여함.
+> #### CSS 원칙2
+> > 
+> > - 1원칙: 모든 요소는 네모(박스모델)이고, 좌측 상단에 배치.
+> > - 2원칙: display에 따라 크기와 배치가 달라진다.
+> > 
+> #### display
+> > 
+> > - display: block
+> > 
+> >   > - 줄바꿈이 일어나는 요소
+> >   > - 화면 크기 전체의 가로 폭 차지
+> >   > - block 요소 안에 inline 요소가 들어갈 수 있다.
+> >   > - div / ul, ol, li, p, hr, form 등
+> > 
+> > - display: inline
+> > 
+> >   > - 줄 바꿈이 일어나지 않는 행의 일부 요소
+> >   > - 텍스트 관련 요소들
+> >   > - content 너비만큼 가로 폭을 차지
+> >   > - width, height, margin-top, margin-bottom을 지정할 수 없다.
+> >   > - 상하 여백은 line-height로 지정
+> >   > - span / a / img / input, label / b, em, i, strong 등
+> > 
+> > - display: inline-block
+> > 
+> >   > - block과 inline 레벨 요소 특징을 모두 가진다
+> >   > - inline 처럼 한 줄에 표시 가능, block 처럼 width, height, margin 속성 지정 가능
+> > 
+> > - display: none
+> > 
+> >   > - 해당 요소를 화면에 표시하지 않고, 공간도 부여하지 않음
+> >   > - visibility: hidden의 경우 표시는 하지 않지만 공간은 부여함.
 >
 >#### 수평 정렬
 >
@@ -640,39 +640,39 @@
 
 > #### CSS position
 >
-> - 문서 상에서 요소의 위치를 지정
->
-> - static
->
->   > - 기본값
->   > - Normal Flow
->   > - 부모 요소 내에서 배치될 경우 부모 요소의 위치를 기준
->
-> - top, bottom, left, right를 사용하여 이동 가능
->
-> - relative : 상대 위치
->
->   > - Normal Flow 유지
->   > - 자기 자신의 static 위치를 기준으로 이동
->   > - 레이아웃에서 차지하는 공간은 static과 같다.
->
-> - absolute : 절대 위치
->
->   > - Normal Flow 유지 X - 레이아웃 공간 차지 X
->   > - **static이 아닌** 부모/조상 요소를 기준으로 이동
->   > - static이 없는 경우 body 태그를 기준으로 이동
->
-> - fixed : 고정 위치
->
->   > - Normal Flow 유지 X - 레이아웃 공간 차지 X
->   > - 부모 요소와 관계없이 viewport를 기준으로 이동
->   > - 스크롤을 해도 같은 위치
->
-> - sticky : 상대적 고정위치
->
->   > - 스크롤을 내려서 보기 전까지 relative
->   > - 보기 시작하면 부모 영역 내에서 fixed와 같이 동작
-
+> > - 문서 상에서 요소의 위치를 지정
+> > 
+> > - static
+> >
+> >   > - 기본값
+> >   > - Normal Flow
+> >   > - 부모 요소 내에서 배치될 경우 부모 요소의 위치를 기준
+> >
+> > - top, bottom, left, right를 사용하여 이동 가능
+> >
+> > - relative : 상대 위치
+> >
+> >   > - Normal Flow 유지
+> >   > - 자기 자신의 static 위치를 기준으로 이동
+> >   > - 레이아웃에서 차지하는 공간은 static과 같다.
+> >
+> > - absolute : 절대 위치
+> >
+> >   > - Normal Flow 유지 X - 레이아웃 공간 차지 X
+> >   > - **static이 아닌** 부모/조상 요소를 기준으로 이동
+> >   > - static이 없는 경우 body 태그를 기준으로 이동
+> >
+> > - fixed : 고정 위치
+> >
+> >   > - Normal Flow 유지 X - 레이아웃 공간 차지 X
+> >   > - 부모 요소와 관계없이 viewport를 기준으로 이동
+> >   > - 스크롤을 해도 같은 위치
+> >
+> > - sticky : 상대적 고정위치
+> >
+> >   > - 스크롤을 내려서 보기 전까지 relative
+> >   > - 보기 시작하면 부모 영역 내에서 fixed와 같이 동작
+ >
 ---
 
 
