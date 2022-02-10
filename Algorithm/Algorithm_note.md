@@ -55,14 +55,16 @@ def Counting_Sort(A):
        
     for i in range(1, len(C)):
         C[i] += C[i-1]
+   
     
-    for a in A:
-        C[a] -= 1
-        B[C[a]] = a
-    # 아래와 같다.
-    # for i in range(len(B)-1, -1, -1):
-    	# C[A[i]] -= 1
-        # B[C[A[i]]] = A[i]
+    for i in range(len(B)-1, -1, -1):
+    	C[A[i]] -= 1
+        B[C[A[i]]] = A[i]
+    # 위는 stable sort 아래는 unstable sort
+    # 중복된 값들의 순서가 그대로 => stable
+    # for a in A:
+    #     C[a] -= 1
+    #     B[C[a]] = a
     # 또는
     # for i in range(len(B)):
         # C[A[i]] -= 1
