@@ -63,158 +63,158 @@
 
 >  #### CSS Flexible Box Layout
 >
-> - **메인 축**을 기준으로 행과 열 형태의 **1차원** 레이아웃 모델
-> - main axis, cross axis로 메인, 교차 축으로 나뉜다.
-> - 수직 정렬이나 내부 아이템의 너비, 높이, 간격을 동일하게 배치할 수 있다.
+>  > - **메인 축**을 기준으로 행과 열 형태의 **1차원** 레이아웃 모델
+>  > - main axis, cross axis로 메인, 교차 축으로 나뉜다.
+>  > - 수직 정렬이나 내부 아이템의 너비, 높이, 간격을 동일하게 배치할 수 있다.
 >
 >  #### Flexbox 구성요소
 >
-> - Flex Container (부모 요소)
->   - Flex item들이 놓여있는 영역
->   - `display: flex;`  또는 `display: inline-flex;` 로 지정
-> - Flex Item (자식 요소)
->   - Container에 들어 있는 컨텐츠
+>  > - Flex Container (부모 요소)
+>  >   - Flex item들이 놓여있는 영역
+>  >   - `display: flex;`  또는 `display: inline-flex;` 로 지정
+>  > - Flex Item (자식 요소)
+>  >   - Container에 들어 있는 컨텐츠
 >
 >  #### Flex 속성
 >
-> > - `flex-direction` : Main axis 기준 방향 설정
-> >
-> >   ``` css
-> >   flex-direction: row;
-> >   |123		|
-> >   flex-direction: row-reverse;
-> >   |		 321|
-> >   flex-direction: column;
-> >   --
-> >   1
-> >   2
-> >   3
-> >   
-> >   --
-> >   flex-direction: column-reverse;
-> >   --
-> >   
-> >   3
-> >   2
-> >   1
-> >   --
-> >   ```
-> >
-> > - `flex-wrap` : 아이템이 컨테이너 내부에 위치하도록 설정
-> >
-> >   ```css
-> >   flex-wrap: wrap; /* 한줄이 넘어가면 다음 줄에 배치 */
-> >   |1 2 3|
-> >   |4 5  |
-> >   flex-wrap: nowrap; /* 기본값, 한줄에 배치*/
-> >   |12345|
-> >   ```
-> >
-> > - `flex-flow` : flex-direction 과 wrap을 축약형
-> >
-> > - `justify-content` : Main axis를 기준으로 공간을 배분, 배치
-> >
-> >   ```css
-> >   justify-content: flex-start;
-> >   |123						|
-> >   justify-content: flex-end;
-> >   |						123|
-> >   justify-content: center;
-> >   |			123			|
-> >   justify-content: space-between;  /* 요소 사이에만 */
-> >   |1			2			3|
-> >   justify-content: space-around;  /* 요소+앞뒤 여유공간 */
-> >   | 1    2    3    4    5 |
-> >   justify-content: space-evenly;
-> >   |  1  2  3  4  5  |
-> >   ```
-> >
-> > - `align-content` : Cross axix를 기준으로 공간배분 - justify-content와 동일 방식
-> >
-> >   ```css
-> >   align-content: flex-start;
-> >   |1  2|
-> >   |3   |
-> >   |    |
-> >   align-content: flex-end;
-> >   |    |
-> >   |1  2|
-> >   |3   |
-> >   align-content: center;
-> >   |    |
-> >   |1  2|
-> >   |3   |
-> >   |    |
-> >   align-content: space-between;  /* 요소 사이에만 */
-> >   |1  2|
-> >   |    |
-> >   |    |
-> >   |3   |
-> >   align-content: space-around;  /* 요소+앞뒤 여유공간 */
-> >   |    |
-> >   |1  2|
-> >   |    |
-> >   |    |
-> >   |3   |
-> >   |    |
-> >   align-content: space-evenly;
-> >   |    |
-> >   |1  2|
-> >   |    |
-> >   |3   |
-> >   |    |
-> >   ```
-> >
-> > - `align-items` : 모든 아이템을 Cross axis를 기준으로 정렬
-> >
-> >   ```css
-> >   align-items: stretch; /* 세로로 꽉 채움 */
-> >   |1 2 3|
-> >   |1 2 3|
-> >   |1 2 3|
-> >   align-items: flex-start;
-> >   |1 2 3|
-> >   |     |
-> >   |     |
-> >   align-items: flex-end;
-> >   |     |
-> >   |     |
-> >   |1 2 3|
-> >   align-items: center;
-> >   |     |
-> >   |1 2 3|
-> >   |     |
-> >   align-items: baseline; /* 가운데 맞춤 */
-> >   |1    |
-> >   |1 2  |
-> >   |1 2 3|
-> >   |1 2  |
-> >   |1    |
-> >   ```
-> >
-> > - `align-self` : 개별 아이템을 Cross axis를 기준으로 정렬
-> >
-> > - `flex-grow` : 남은 영역을 아이템에 분배
-> >
-> > - `order` : 배치 순서
-> >
-> > - `shrink` : 넘친 영역을 축소배분
-> >
-> > - `basis` : 초기 크기 설정. 넘으면 넘긴대로 늘림
-> >
-> > - `flex: grow shrink basis` : grow shrink basis 간략화
-> >
-> >  ※ 가운데 배치
-> >
-> >  ```css
-> >  .container {
-> >      display: flex;
-> >      justify-content: center;
-> >      align-items: center;
-> >  }
-> >  ```
-> >
-> > 
+>  > - `flex-direction` : Main axis 기준 방향 설정
+>  >
+>  >   ``` css
+>  >   flex-direction: row;
+>  >   |123		|
+>  >   flex-direction: row-reverse;
+>  >   |		 321|
+>  >   flex-direction: column;
+>  >   --
+>  >   1
+>  >   2
+>  >   3
+>  >   
+>  >   --
+>  >   flex-direction: column-reverse;
+>  >   --
+>  >   
+>  >   3
+>  >   2
+>  >   1
+>  >   --
+>  >   ```
+>  >
+>  > - `flex-wrap` : 아이템이 컨테이너 내부에 위치하도록 설정
+>  >
+>  >   ```css
+>  >   flex-wrap: wrap; /* 한줄이 넘어가면 다음 줄에 배치 */
+>  >   |1 2 3|
+>  >   |4 5  |
+>  >   flex-wrap: nowrap; /* 기본값, 한줄에 배치*/
+>  >   |12345|
+>  >   ```
+>  >
+>  > - `flex-flow` : flex-direction 과 wrap을 축약
+>  >
+>  > - `justify-content` : Main axis를 기준으로 공간을 배분, 배치
+>  >
+>  >   ```css
+>  >   justify-content: flex-start;
+>  >   |123						|
+>  >   justify-content: flex-end;
+>  >   |						123|
+>  >   justify-content: center;
+>  >   |			123			|
+>  >   justify-content: space-between;  /* 요소 사이에만 */
+>  >   |1			2			3|
+>  >   justify-content: space-around;  /* 요소+앞뒤 여유공간 */
+>  >   | 1    2    3    4    5 |
+>  >   justify-content: space-evenly;
+>  >   |  1  2  3  4  5  |
+>  >   ```
+>  >
+>  > - `align-content` : Cross axix를 기준으로 공간배분 - justify-content와 동일 방식
+>  >
+>  >   ```css
+>  >   align-content: flex-start;
+>  >   |1  2|
+>  >   |3   |
+>  >   |    |
+>  >   align-content: flex-end;
+>  >   |    |
+>  >   |1  2|
+>  >   |3   |
+>  >   align-content: center;
+>  >   |    |
+>  >   |1  2|
+>  >   |3   |
+>  >   |    |
+>  >   align-content: space-between;  /* 요소 사이에만 */
+>  >   |1  2|
+>  >   |    |
+>  >   |    |
+>  >   |3   |
+>  >   align-content: space-around;  /* 요소+앞뒤 여유공간 */
+>  >   |    |
+>  >   |1  2|
+>  >   |    |
+>  >   |    |
+>  >   |3   |
+>  >   |    |
+>  >   align-content: space-evenly;
+>  >   |    |
+>  >   |1  2|
+>  >   |    |
+>  >   |3   |
+>  >   |    |
+>  >   ```
+>  >
+>  > - `align-items` : 모든 아이템을 Cross axis를 기준으로 정렬
+>  >
+>  >   ```css
+>  >   align-items: stretch; /* 세로로 꽉 채움 */
+>  >   |1 2 3|
+>  >   |1 2 3|
+>  >   |1 2 3|
+>  >   align-items: flex-start;
+>  >   |1 2 3|
+>  >   |     |
+>  >   |     |
+>  >   align-items: flex-end;
+>  >   |     |
+>  >   |     |
+>  >   |1 2 3|
+>  >   align-items: center;
+>  >   |     |
+>  >   |1 2 3|
+>  >   |     |
+>  >   align-items: baseline; /* 가운데 맞춤 */
+>  >   |1    |
+>  >   |1 2  |
+>  >   |1 2  |
+>  >   |1 2 3|
+>  >   |     |
+>  >   ```
+>  >
+>  > - `align-self` : 개별 아이템을 Cross axis를 기준으로 정렬
+>  >
+>  > - `flex-grow` : 남은 영역을 아이템에 분배
+>  >
+>  > - `order` : 배치 순서, 기본값: 0
+>  >
+>  > - `shrink` : 넘친 영역을 축소배분
+>  >
+>  > - `basis` : 초기 크기 설정. 넘으면 넘긴대로 늘림
+>  >
+>  > - `flex: grow shrink basis` : grow shrink basis 간략화
+>  >
+>  >  ※ 가운데 배치
+>  >
+>  >  ```css
+>  >  .container {
+>  >      display: flex;
+>  >      justify-content: center;
+>  >      align-items: center;
+>  >  }
+>  >  ```
+>  >
+>  > 
 
 ---
 
