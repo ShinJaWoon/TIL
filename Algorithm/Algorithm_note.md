@@ -99,5 +99,30 @@ def Counting_Sort(A):
 
 # 리스트 출력
 print(*arr) # 요소를 하나씩 띄어서 출력
+
+# 2차원 리스트 받기
+N = int(input()) # 열 개수
+arr = [list(map(int, input().split())) for _ in range(N)]
+
+# 2차원 리스트 지그재그
+for i in range(m):
+    for j in range(n):
+        arr[i][j + (n-1 - 2*j)*(i%2)]
+        
+	
+# 부분 집합
+n = len(arr)
+
+for i in range(1<<n): # 공집합 포함
+    for j in range(n):
+        if i & (1<<j):
+            print(arr[j, end = ", "])
+        print()
+    print()
+    
+# &: 비트 and 연산
+# |: 비트 or 연산
+# a << b: a의 비트 열을 왼쪽으로 b 만큼 (2^b) 만큼 곱
+# a >> b: a의 비트 열을 오른쪽으로 b 만큼 (2^b) 만큼 나눔
 ```
 
