@@ -25,7 +25,7 @@ def Bubble_Sort(a, N):	# a: 정렬할 List, N: 리스트의 길이
                 a[j], a[j+1] = a[j+1], a[j]
     return
                 
-# ======================================================================
+# -------------------------------------------------------------------
 
 # 카운팅 정렬
 # ======================================================================
@@ -89,8 +89,117 @@ def Counting_Sort(A):
         B[C[a]] = a
         
     return B
-# ======================================================================
+# -------------------------------------------------------------------
 
+
+# 선택 정렬
+# ======================================================================
+"""
+남은 리스트에서 최솟값을 찾아 남은 리스트의 맨 앞으로 보낸다.
+"""
+
+def selectionSort(a, N):
+  # 0 ~ N-1까지. N번째는 혼자 남으므로 정렬할 필요가 없다.
+  for i in range(N-1):
+      # 리스트의 시작점
+      min_idx = i
+      for j in range(i+1, N):
+          # 최솟값의 인덱스를 찾는다.
+          if a[min_idx] > a[j]:
+              min_idx = j
+      # 최솟값을 시작점과 교환
+      a[i], a[min_idx] = a[min_idx], a[i]
+-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+# =========================================================================
+KMP 패턴 서칭
+
+def lps_maker(pattern, len_p):
+    table = [0] * (len_p+1)  
+    # 패턴을 찾는 중 다른 값이 나왔을 때 다시 비교를 시작할 idx를 저장한다.
+    # 접두사가 겹쳐서 불필요한 서칭을 방지
+    # ABCDABCE
+    #-100001230
+    # E 에서 틀릴 경우 text가 D인지 확인해야 한다. ( E 앞에 ABC가 있으므로)
+    # E의 인덱스 7을 lps에 넣으면 lps[7] = 3 --> D의 인덱스
+    
+    # -1을 넣는 이유: lps[0]이 들어왔을 때 i와 j는 동시에 +1을 하게 하기 위함
+    # text = OPQRSTUVWXYZ이고 pattern이 ABCDABCE인 경우
+    # O와 A가 다르면 j = lps[j] <= j = lps[0] = -1 이 되고 i와 j는 +1이 되지 않는다.
+    # 다시 j가 -1이 되면 i+1 j+1 이 되어 j=0(A), i=1(P)
+    # i와 j가 동시에 +1이 되기 때문에 패턴에서 찾는 위치를 0부터 시작하기 위해 -1이 들어간다.
+    j = 0
+    i = 1
+    table[0] = -1
+    for i in range(1, len_p):
+        while j > 0 and pattern[i] != pattern[j]:
+            j = table[j]
+            # AAAADAAAAAAE
+            # 0123456789
+            #-1012301234440
+            # j=8에서 틀리면 table[8]=4, j=4(D)부터 다시 검사하면 된다.
+            # j=8에서 앞에 AAA가 있기 때문에 AAAD에서 AAA는 검사할 필요가 없는 것.
+
+        if pattern[i] == pattern[j]:
+            j += 1
+            table[i+1] = j # 틀릴 경우 패턴에서 어디부터 검사해야 불필요한 부분이 없는가?를 넣는곳
+
+    return table
+
+
+T = 10
+for tc in range(1, T+1):
+    tc_n = int(input())
+    pattern = input()
+    text = input()
+    len_pattern = len(pattern)
+    len_text = len(text)
+
+    lps = lps_maker(pattern, len_pattern)
+    i = 0   # text idx
+    j = 0   # pattern idx
+    count = 0  # pattern count
+    find_index = []
+    while i < len_text and j <= len_pattern: # and j <= len_pattern은 없어도 될것 같음
+        if j == -1 or text[i] == pattern[j]: 
+        # 패턴이 다르고 -1이 아니라면 발동 안됨
+        # 패턴과 비교를 시작한 이후에 패턴이 다르면 발동이 안된다는 얘기
+        # 패턴 비교를 시작할 때, 그리고 패턴이 일치하고 있을 때만 발동
+        # j = 0이고 패턴이 다르면 else에서 j = -1이 되고 다시 여기로 와서 i+1 j+1
+        # 패턴검사를 다시 시작할 때 j=0에서 시작하는 것이 아니라 j가 -1이 되었다가 0이되면서 시작한다고 생각하면 됨
+            i += 1
+            j += 1
+        else: 
+        # 패턴이 다를 때 돌아갈 곳. j가 0이 되면 다시 -1로 만들어 주는 역할도 함
+            j = lps[j]
+        if j == len_pattern:
+            count += 1
+            find_index.append(i-len_pattern)
+            j = lps[j]
+# ----------------------------------------------
+# lps를 1칸 안늘리는 방식
+def lps_maker(pattern, len_p):
+    table = [0] * (len_p)
+    j = 0
+    i = 1
+    table[0] = -1
+    for i in range(1, len_p):
+        table[i] = j
+        while j > 0 and pattern[i] != pattern[j]:
+            j = table[j]
+
+        if pattern[i] == pattern[j]:
+            j += 1
+            
+    return table
 ```
 
 ```python
