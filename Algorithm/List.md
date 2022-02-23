@@ -294,6 +294,83 @@
 
 
 
+<br>
+
+
+
+### 퀵 정렬
+
+> #### 퀵 정렬
+>
+> > - 평균적으로 가장 빠른 정렬	
+>
+> #### 정렬과정
+>
+> > 1. 가운데 값을 pivot으로 둔다.
+> > 2. L이 오른쪽으로 이동하면서 피봇보다 크거나 같은 원소를 찾고
+> > 3. R이 왼쪽으로 이동하며서 피봇보다 작은 원소를 찾는다.
+> > 4. 찾은 값들끼리 자리를 바꾼다. (피봇보다 큰 값은 피봇 오른쪽에, 작은 값은 왼쪽에 두는 것.)
+> > 5. L과 R이 만나면 (L+1까지 R이 오면) 피봇과 만난 장소를 바꾸고 해당 위치를 고정시킨다. 
+> > 6. 고정된 피봇들 사이의 범위에서 위의 과정을 반복한다.
+>
+> #### 시간 복잡도
+>
+> > - 평균 O(nlogn)
+> > - 최악의 경우 O(n^2)
+>
+> #### 예시 코드
+>
+> >  ```python
+> >  def quickSort(a, begin, end):
+> >      if begin < end:
+> >          p = partition(a, begin, end)
+> >          quickSort(a, begin, p-1)
+> >          quickSort(a, p+1, end)
+> >  
+> >  def partition (a, begin, end):
+> >      pivot = (begin + end) // 2
+> >      L = begin
+> >      R = end
+> >      while L < R:
+> >          while(L<R and a[L] < a[pivot]):
+> >              L += 1
+> >          while(L<R and a[R] >= a[pivot]):
+> >              R -= 1
+> >          if L < R:
+> >              if L == pivot:
+> >                  pivot = R
+> >                  a[L], a[R] = a[R], a[L]
+> >      a[pivot], a[R] = a[R], a[pivot]
+> >      return R
+> >              
+> >          
+> >  ```
+> >
+> > ```python
+> > def quick_sort(array):
+> >     # 리스트가 하나 이하의 원소만을 담고 있다면 종료
+> >     if len(array) <= 1:
+> >         return array
+> >     pivot = array[0]  # 피벗은 첫 번째 원소
+> >     tail = array[1:]  # 피벗을 제외한 리스트
+> > 
+> >     # 오름차순
+> >     # left_side = [x for x in tail if x <= pivot]  # 분할된 왼쪽 부분
+> >     # right_side = [x for x in tail if x > pivot]  # 분할된 오른쪽 부분
+> >     
+> >     # 내림차순
+> >     left_side = [x for x in tail if x > pivot]  # 분할된 왼쪽 부분
+> >     right_side = [x for x in tail if x <= pivot]  # 분할된 오른쪽 부분
+> > 
+> >     # 분할 이후 왼쪽 부분과 오른쪽 부분에서 각각 정렬 수행하고 전체 리스트 반환
+> >     return quick_sort(left_side) + [pivot] + quick_sort(right_side)
+> > 
+> > 
+> > print(quick_sort(array))
+> > ```
+> >
+> > 
+
 
 
 <br>

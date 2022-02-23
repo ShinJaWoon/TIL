@@ -111,16 +111,61 @@ def selectionSort(a, N):
       a[i], a[min_idx] = a[min_idx], a[i]
 -------------------------------------------------------------------
 
+# 퀵 정렬 ==================================================================
+def quickSort(a, begin, end):
+    if begin < end:
+        p = partition(a, begin, end) # 파티션 함수를 통해 정렬시켜 고정된 위치들을 받는다.
+        quickSort(a, begin, p-1) # 고정된 위치를 제외하고 퀵정렬을 다시 한다.
+        quickSort(a, p+1, end)
+
+def partition (a, begin, end):
+    pivot = (begin + end) // 2
+    L = begin
+    R = end
+    while L < R:
+        # L은 왼쪽에서 피벗보다 큰 값을 찾을 때까지 오른쪽으로 이동
+        while(L<R and a[L] < a[pivot]):
+            L += 1
+        # R은 오른쪽에서 피벗보다 작은 값을 찾을 때까지 왼쪽으로 이동
+        while(L<R and a[R] >= a[pivot]):
+            R -= 1
+        if L < R:
+            if L == pivot: # 왼쪽영역에 피벗보다 큰 값이 없을 때
+                pivot = R	# 피벗을 다시 지정
+                a[L], a[R] = a[R], a[L]
+    # L과 R이 만났을 경우, 피벗과 위치를 바꾸고 위치를 고정시킨다. 
+    # 만났으므로 a[R] = a[L]
+    a[pivot], a[R] = a[R], a[pivot]
+    # 고정된 위치를 반환
+    return R
 
 
+# 다른 방법
+def quick_sort(array):
+    # 리스트가 하나 이하의 원소만을 담고 있다면 종료
+    if len(array) <= 1:
+        return array
+    pivot = array[0]  # 피벗은 첫 번째 원소
+    tail = array[1:]  # 피벗을 제외한 리스트
 
+    # 오름차순
+    # left_side = [x for x in tail if x <= pivot]  # 분할된 왼쪽 부분
+    # right_side = [x for x in tail if x > pivot]  # 분할된 오른쪽 부분
+    
+    # 내림차순
+    left_side = [x for x in tail if x > pivot]  # 분할된 왼쪽 부분
+    right_side = [x for x in tail if x <= pivot]  # 분할된 오른쪽 부분
 
+    # 분할 이후 왼쪽 부분과 오른쪽 부분에서 각각 정렬 수행하고 전체 리스트 반환
+    return quick_sort(left_side) + [pivot] + quick_sort(right_side)
+
+# ---------------------------------------------------------------
 
 
 
 
 # =========================================================================
-KMP 패턴 서칭
+# KMP 패턴 서칭
 
 def lps_maker(pattern, len_p):
     table = [0] * (len_p+1)  
