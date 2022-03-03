@@ -93,6 +93,7 @@
 > > pip install django  <- 최신버전
 > > 
 > > pip freeze > requirements.txt
+> > pip install -r requirements.txt
 > > ```
 >
 >  #### 프로젝트 생성
@@ -399,5 +400,94 @@
 > ```
 >
 > 
+>
+
+
+
+## HTML Form
+
+### HTML "form" element
+
+> - 웹에서 사용자로부터 입력받은 데이터를 서버로 전송하는 역할
+> - text, button, checkbox, file, hidden, image, password, radio, reset, submit 등
+>   - `action` : 입력 데이터가 전송될 URL
+>     - 앞에 아무것도 붙이지 않으면 현재 page 경로 + 
+>     - `/` 를 앞에 붙이면 메인 url +
+>   - `method` : 입력 데이터 전달 방식 지정
+
+### HTML "input" element
+
+> - 사용자로부터 데이터를 입력받기 위해 사용
+> - `type` 속성에 따라 동작 방식이 달라진다
+>   - `name` : 중복 가능, 양식 제출 시 name이라는 이름에 설정된 값을 넘겨서 값을 가져올 수 있음. 변수 명과 비슷
+
+### HTML "label" element
+
+> - 사용자 인터페이스 항목에 대한 설명
+> - input의 `id` 속성과 동일한 값의 `for` 속성 필요
+
+
+
+### HTTP
+
+> - HyperText Transfer Protocal
+> - HTTP request method 종류
+>   - GET, POST, PUT, DELETE...
+>   - Django에서는 GET/POST 만 지원
+>
+>  #### GET
+>
+> > - 서버로부터 정보를 조회
+> > - 데이터를 가져올 때만 사용
+> > - body가 아닌 Query String Parameters를 통해 전송
+> >   - 주소로 데이터가 전달되는 형태
+> >   - 누구에게나 데이터가 노출되는 형태이므로 중요 데이터는 POST로 전달
+> > - 서버에 요청을 하면 HTML 문서를 받는 데, 이 때 요청의 방식이 GET
+>
+> #### POST
+>
+> > - DB와 작업을 할 때
+> > - 생성, 수정, 삭제
+
+
+
+## URL
+
+> - 앱마다 urls를 따로 분류하여 관리
+
+### Variable Routing
+
+> - URL 주소를 변수로 사용하는 것.
+> - URL 주소 일부를 변수로 views에서 사용가능
+>
+> ```python
+> # urls.py
+> path('appname/<str:username>/', views.profile)
+> 
+> 
+> # views.py
+> def profile(request, username):
+>     context = {
+>         'username': username
+>     }
+>     return render(request, 'profile.html', context)
+> ```
+>
+> - 사용가능한 자료형
+>   - str: `/` d을 제외하고 비어있지 않은 모든 문자열
+>   - int: 0 또는 양의 정수
+>   - slug : 하이픈, 밑줄이 포함된 문자열
+
+### Naming URL patterns
+
+> ```python
+> # urls.py
+> path('index/', vies.index, name='index')
+> ```
+>
+> ```django
+> <form action="{% url 'index' %}"" method="GET">
+> </form>
+> ```
 >
 > 
