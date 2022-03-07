@@ -490,4 +490,73 @@
 > </form>
 > ```
 >
+
+### NameSpace
+
+> ```python
+> # urls.py
 > 
+> app_name = 'articles'
+> urlpatterns = [
+>     path('index/', views.index, name='index'),
+> ]
+> ```
+>
+> ```django
+> {# index.html #}
+> 
+> {% include 'articles/_nav.html' %}
+> 
+> {% extends 'base.html' %}
+> 
+> {% block content %}
+>   <a href="{% url 'articles:index' %}">index</a>
+> {% endblock content %}
+> 
+> 
+> ```
+>
+> - url 태그를 사용할 때 app_name:url_name 으로 사용
+> - include 도 동일
+> - app/templates/app/html 의 구조를 지님
+>
+> 
+
+### Static files
+
+> ```django
+> {% load static %}
+> 
+> <img src="{% static 'app/example.jpg' %}" alt="image name">
+> 
+> ```
+>
+> - static 파일은 앱 내부의 static 폴더에 저장.
+> - app/static/app/파일 의 구조를 지님
+> - built-in 이 아니기 때문에 load를 이용해 불러온 후 사용 (import와 비슷)
+>
+> #### STATICFILES_DIRS
+>
+> > ```python
+> > # settings.py
+> > STATICFILES_DIRS = [
+> >     BASE_DIR / 'static', 
+> > ]
+> > ```
+> >
+> > - 추가적인 static 파일 경로 지정
+>
+> #### STATIC_URL
+>
+> > ```python
+> > STATIC_URL = '/static/'
+> > ```
+> >
+> > - 정적 파일을 참조할 때 사용하는 URL
+> > - 실제 파일이나 디렉토리가 아닌, URL로만 존재
+> > - 비어있지 않은 값일 경우 `/`로 끝나야 함
+>
+> #### STATIC_ROOT
+>
+> > - django 프로젝트에서 사용하는 모든 정적 파일을 한 곳에 모아 넣는 경로
+> > - settings.py의 DEBUG 값이 True 일 경우 작용하지 않는다.

@@ -283,7 +283,11 @@
 
 [[#10989 수 정렬하기 3]](2022_03/0302_stage_12.md) https://www.acmicpc.net/problem/10989
 
+[[#2108 통계학]](2022_03/0303_stage_12.md) https://www.acmicpc.net/problem/2108
 
+[[#1427 소트인사이드]](2022_03/0303_stage_12.md) https://www.acmicpc.net/problem/1427
+
+[[#11650 좌표 정렬하기]](2022_03/0303_stage_12.md) https://www.acmicpc.net/problem/11650
 
 <br>
 
