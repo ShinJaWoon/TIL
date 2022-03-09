@@ -289,6 +289,10 @@
 
 [[#11650 좌표 정렬하기]](2022_03/0303_stage_12.md) https://www.acmicpc.net/problem/11650
 
+[[#11651 좌표 정렬하기 2]](2022_03/0309_stage_12.md) https://www.acmicpc.net/problem/11651\
+
+
+
 <br>
 
 
