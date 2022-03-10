@@ -488,6 +488,9 @@
 > ```django
 > <form action="{% url 'index' %}"" method="GET">
 > </form>
+>                                               
+> url 태그를 이용해서 입력받은 인자를 보낼수도 있다.                                            
+> <a href="{% url 'articles:index' article.pk %}">index</a>
 > ```
 >
 
@@ -498,7 +501,7 @@
 > 
 > app_name = 'articles'
 > urlpatterns = [
->     path('index/', views.index, name='index'),
+>  path('index/', views.index, name='index'),
 > ]
 > ```
 >
@@ -510,7 +513,8 @@
 > {% extends 'base.html' %}
 > 
 > {% block content %}
->   <a href="{% url 'articles:index' %}">index</a>
+> <a href="{% url 'articles:index' %}">index</a>
+> 
 > {% endblock content %}
 > 
 > 
