@@ -291,7 +291,11 @@
 
 [[#11651 좌표 정렬하기 2]](2022_03/0309_stage_12.md) https://www.acmicpc.net/problem/11651\
 
+[[#1181 단어 정렬]](2022_03/0310_stage_12.md) https://www.acmicpc.net/problem/1181
 
+[[#10814 나이순 정렬]](2022_03/0310_stage_12.md) https://www.acmicpc.net/problem/10814
+
+[[#18870 좌표 압축]](2022_03/0310_stage_12.md) https://www.acmicpc.net/problem/18870
 
 <br>
 
