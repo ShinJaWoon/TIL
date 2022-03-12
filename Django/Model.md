@@ -39,14 +39,19 @@
 > ```python
 > # articles/models.py
 > class Article(models.Model): # models의 Model 클래스를 상속받음
->     # 아래에 각각의 필드(열)를 선언
->     title = modles.CharField(max_length=10)	# 문자형식, 길이제한 필수
->     content = models.TextField() # 길이 제한 없는 문자형식
->     created_at = models.DateTimeField(auto_now_add=True) 
->     # auto_now_add : 데이터가 생설될 대 시간을 자동으로 저장
->     updated_at = models.DateTimeField(auto_now=True)
->     # auto_now : 현재 시간을 자동으로 저장
->     # null=True == blank=Ture : default값 설정, 숫자는 null 문자는 blank
+>  # 아래에 각각의 필드(열)를 선언
+> 	title = modles.CharField(max_length=10)	# 문자형식, 길이제한 필수
+> 	content = models.TextField() # 길이 제한 없는 문자형식
+> 	created_at = models.DateTimeField(auto_now_add=True) 
+> 	# auto_now_add : 데이터가 생설될 대 시간을 자동으로 저장
+> 	updated_at = models.DateTimeField(auto_now=True)
+> 	# auto_now : 현재 시간을 자동으로 저장
+> 	# null=True == blank=Ture : default값 설정, 숫자는 null 문자는 blank
+>     
+>     def __str__(self):
+>         return f'{self.pk} {self.title}'
+>     
+>     
 > ```
 
 
