@@ -293,3 +293,78 @@ def f(i, N, s, t):  # s는 현재 상태(ex: 합), t는 기준
         # 다시 변화를 돌린다.
 ```
 
+```python
+# 트리
+
+# 이중 트리
+V = int(input())  # 정점의 개수
+E = V - 1		# 간선의 갯수
+arr = list(map(int, input().split()))
+
+# 자식 노드
+ch1 = [0] * (1 + V)
+ch2 = [0] * (1 + V)
+# 부모 노드
+par = [0] * (1 + V)
+
+for i in range(E):
+    # 아래 i*2와 같은 인덱싱은 이진 트리에서만 사용 가능
+    p = arr[i*2]
+    c = arr[i*2 +1]
+    if ch1[p] == 0:
+        ch1[p] = c
+    else:
+        ch2[p] = c
+    par[c] = p
+
+# 전위 순회
+def pre_order(v):
+    # 자식이 있다면. ch[v] 가 0일 경우를 제외하기 위함
+    if v:
+        print(v, end=' ')
+        pre_order(ch1[v])
+        pre_order(ch2[v])
+
+# 중위 순회
+def in_order(v):
+    if v:
+        in_order(ch1[v])
+        print(v, end=' ')
+        in_order(ch2[v])
+
+# 후위 순회
+def post_order(v):
+    if v:
+        post_order(ch1[v])
+        post_order(ch2[v])
+        print(v, end=' ')
+
+pre_order(1)
+print()
+in_order(1)
+print()
+post_order(1)
+print()
+
+# 조상을 찾아보는 코드
+def find_ancestor(c):
+    while par[c] != 0:
+        print(c)
+        c = par[c]
+    return c
+
+
+# 완전 이진트리가 아닐 경우 root를 찾는다.
+def find_root(V):
+    for i in range(1, V+1):
+        if par[i] == 0:
+            return i
+
+root = find_root(V)
+pre_order(root)
+
+
+
+
+```
+
