@@ -48,12 +48,11 @@
 ## Algorithm
 
 1. [List](Algorithm/List.md)
-
 2. [String](Algorithm/String.md)
-
 3. [Stack](Algorithm/Stack.md)
-
 4. [Queue](Algorithm/Queue.md)
+4. [Tree](Algorithm/Tree.md)
+4. [Bit](Algorithm/Bit.md)
 
 - [Algorithm 노트](Algorithm/Algorithm_note.md)
 
