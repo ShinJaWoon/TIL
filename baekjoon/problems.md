@@ -313,6 +313,8 @@
 
 [[#15652 N과 M (4)]](2022_03/0314_stage_14.md) https://www.acmicpc.net/problem/15652
 
+[[#9663 N-Queen]](2022_03/0317_stage_14.md) https://www.acmicpc.net/problem/15649
+
 
 
 ## IM 대비 문제풀기
