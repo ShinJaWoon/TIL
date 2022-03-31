@@ -103,3 +103,28 @@
 > > - 노드번호 i의 오른쪽 자식 노드 : 2*i + 1
 > > - 레벨 n의 시작 노드: 2^n
 > > - 
+
+### 이진 탐색
+
+> ```python
+> def bin_search(A, k):
+>     l = 0
+>     r = len(A) - 1
+> 
+>     while l <= r:
+>         m = (l + r) // 2
+> 
+>         if A[m] == k:
+>             return True
+>         # 왼쪽
+>         elif A[m] > k:
+>             r = m - 1
+> 
+>         # 오른쪽
+>         elif A[m] < k:
+>             l = m + 1
+> 
+>     return False
+> ```
+>
+> 
