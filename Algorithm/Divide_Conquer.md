@@ -106,11 +106,11 @@
 > > # Lomuto partition 알고리즘
 > > # r이 pivot으로 작동
 > > def partition(arr, l, r):
-> >     x = arr[r]
+> >     p = arr[r]
 > >     i = l - 1
 > > 
 > >     for j in range(l, r):
-> >         if arr[j] <= x:
+> >         if arr[j] <= p:
 > >             i += 1
 > >             arr[i], arr[j] = arr[j], arr[i]
 > >     arr[i + 1], arr[r] = arr[r], arr[i + 1]

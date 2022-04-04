@@ -61,7 +61,7 @@
 >           preorder(T.right)
 >   ```
 >
-> - 중위 순회(indore traversal) : LVR
+> - 중위 순회(inoder traversal) : LVR
 >
 >   - 왼쪽 자식노드, 부모노드, 오른쪽 자식노드 순
 >   - 가장 왼쪽 밑 자식노드부터 시작하게 됨
