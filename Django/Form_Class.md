@@ -18,31 +18,31 @@
 > - ```python
 >   # forms.py
 >   from django import forms
->   
->   
+>
+>
 >   class ArticleForm(forms.Form):
 >       title = forms.CharField(max_length=10)
 >       content = forms.CharField(widget=forms.Textarea)
 >   ```
->
+> 
 > - ```python
 >   # views.py
 >   from django.shortcuts import render, redirect
 >   from .models import Article
 >   from .forms import ArticleForm
->   
+> 
 >   def new(request):
 >       form = ArticleForm()
 >       context = {
 >           'form': form, 
 >       }
 >       return render(request, 'articles/new.html', context)
->   
->   
+> 
+> 
 >   # 유효성 검사를 하는 경우
 >   def create(request):
 >       form = ArticleForm(request.POST)
->   
+> 
 >       if form.is_valid():
 >           article = form.save()
 >           return redirect('articles:detail', article.pk)
@@ -57,14 +57,15 @@
 >     <hr>
 >     <form action="{% url 'articles:create' %}" method="POST">
 >       {% csrf_token %}
->         
->         
+>
+>
 >       {{ form.as_p }}
->       
->   
+>
+>
 >     </form>
 >     <a href="{% url 'articles:index' %}">back</a>
 >   {% endblock content %}
+>
 >   ```
 
 ### Model Form
@@ -77,14 +78,14 @@
 >   # forms.py
 >   from django import forms
 >   from .models import Article
->   
+>     
 >   class ArticleForm(forms.ModelForm):
->   
+>     
 >       class Meta:
 >           model = Article
 >           fields = '__all__'
 >           # exclude = ('title', )
->           
+>             
 >           # fields와 exclude는 동시에 사용 불가
 >   ```
 >
@@ -94,7 +95,7 @@
 >   # 유효성 검사를 하는 경우
 >   def create(request):
 >       form = ArticleForm(request.POST)
->   
+>     
 >       # 유효성 검사
 >       if form.is_valid():
 >           article = form.save()
@@ -107,10 +108,10 @@
 >
 > - ```python
 >   form  = ArticleForm(request.POST)
->   
+>     
 >   # Create
 >   new_articel = form.save()
->   
+>     
 >   # Update
 >   article = Article.objects.get(pk=1)
 >   form  = ArticleForm(request.POST, instance=article)
@@ -220,7 +221,7 @@
 https://docs.djangoproject.com/en/4.0/topics/forms/#rendering-fields-manually
 
 > - ```django
->   {{ form.title..errors }}
+>   {{ form.title.errors }}
 >   {{ form.title.label_tag }}
 >   {{ form.title }}
 >   ```
@@ -228,7 +229,7 @@ https://docs.djangoproject.com/en/4.0/topics/forms/#rendering-fields-manually
 > - ```django
 >   {# 반복문사용 #}
 >   {% for field in form %}
->     {{ field.title..errors }}
+>     {{ field.title.errors }}
 >     {{ field.title.label_tag }}
 >     {{ field.title }}
 >   ```
@@ -261,3 +262,14 @@ https://docs.djangoproject.com/en/4.0/topics/forms/#rendering-fields-manually
 >
 > 
 
+### 요청에 따른 응답페이지
+
+> ```django
+> {% if request.resolver_match.url_name == 'create' %}
+>   <h1>CREATE</h1>
+> {% elif request.resolver_match.url_name == 'update' %}
+>   <h1>UPDATE</h1>
+> {% endif %}
+> ```
+>
+> 
