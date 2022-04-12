@@ -470,5 +470,33 @@
 >     return render(request, 'accounts/signup.html', context)
 > ```
 
-### 
+### 메세지
+
+> 1. settings.py
+>
+>    - ```python
+>      MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
+>      ```
+>
+> 2. views.py
+>
+>    - ```python
+>      messages.info(request, 'Three credits remain in your account.')
+>      ```
+>
+> 3. django.html
+>
+>    - ```django
+>      {% if messages %}
+>      <ul class="messages">
+>          {% for message in messages %}
+>          <li class="alert alert-{{ message.tags }}">{{ message }}</li>
+>          {% endfor %}
+>      </ul>
+>      {% endif %}
+>      ```
+>
+>    - 
+>
+> - https://docs.djangoproject.com/en/3.2/ref/contrib/messages/
 
