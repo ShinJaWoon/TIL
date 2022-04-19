@@ -18,11 +18,10 @@
 > - ```python
 >   # forms.py
 >   from django import forms
->
->
+>   
 >   class ArticleForm(forms.Form):
 >       title = forms.CharField(max_length=10)
->       content = forms.CharField(widget=forms.Textarea)
+>       content = forms.CharField(widget=forms.Text/area)
 >   ```
 > 
 > - ```python
@@ -51,7 +50,7 @@
 >
 > - ```django
 >   {% extends 'base.html' %}
->   
+>     
 >   {% block content %}
 >     <h1>NEW</h1>
 >     <hr>
@@ -78,14 +77,14 @@
 >   # forms.py
 >   from django import forms
 >   from .models import Article
->     
+>       
 >   class ArticleForm(forms.ModelForm):
->     
+>       
 >       class Meta:
 >           model = Article
 >           fields = '__all__'
 >           # exclude = ('title', )
->             
+>               
 >           # fields와 exclude는 동시에 사용 불가
 >   ```
 >
@@ -95,7 +94,7 @@
 >   # 유효성 검사를 하는 경우
 >   def create(request):
 >       form = ArticleForm(request.POST)
->     
+>       
 >       # 유효성 검사
 >       if form.is_valid():
 >           article = form.save()
@@ -108,10 +107,10 @@
 >
 > - ```python
 >   form  = ArticleForm(request.POST)
->     
+>       
 >   # Create
 >   new_articel = form.save()
->     
+>       
 >   # Update
 >   article = Article.objects.get(pk=1)
 >   form  = ArticleForm(request.POST, instance=article)
