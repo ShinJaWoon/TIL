@@ -75,7 +75,7 @@
 > > ##### v-for
 > >
 > > > - `v-for = "item in items" :key="idx"`
-> > > - `v-for = "(item, idx) in items"`
+> > > - `v-for = "(item, idx) in items" :key="idx"`
 > > > - 반드시 key 속성을 각 요소에 작성
 > > > - 버전2에서는 v-for 가 v-if 보다 우선순위가 높고 3에서는 반대이다.
 > > >   - 무조건 동시에 사용하지 말 것

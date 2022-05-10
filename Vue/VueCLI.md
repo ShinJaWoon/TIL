@@ -173,6 +173,8 @@
 >
 > > - 자식 컴포넌트가 부모 컴포넌트에 보내는 이벤트
 > > - `$emit` 인스턴스 메서드 사용
+> >   - `$emit('이벤트이름', 데이터)`
+> >
 > > - 이벤트 이름은 kebab-case 사용 권장
 > >
 > > ```vue
@@ -209,7 +211,7 @@
 > >   methods: {
 > >     parentGetChange: function (inputData) {
 > >       console.log(`About으로 부터 ${inputData}를 받음!`);
-> >       
+> > 
 > >     }
 > >   }
 > > ...
